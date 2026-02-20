@@ -40,6 +40,36 @@ ou une réunion. Le dashboard GitHub Pages affiche alors les données du dernier
 5. `git add public/data.json && git commit && git push`
 6. GitHub Pages sert `index.html` + `public/data.json` (~2 min de délai)
 
+### ⚠️ Les 4 Google Sheets du projet — seuls 2 sont lus
+
+Le projet dispose de 4 sheets au total, mais le programme n'en lit que 2 :
+
+| Sheet | Nom | Statut | Lu par le script ? |
+|-------|-----|--------|--------------------|
+| Sheet 1 | CSR Questionnaire FR V2 | **Vide** (template) | ❌ Non |
+| Sheet 2 | CSR Questionnaire FR V2 | **Vide** (template) | ❌ Non |
+| Sheet 3 | Questionnaire RSE - FR réponses | **Actif** (réponses réelles) | ✅ Oui |
+| Sheet 4 | CSR Questionnaire - EN réponses | **Actif** (réponses réelles) | ✅ Oui |
+
+Les sheets 1 et 2 sont des templates vides utilisés pour diffuser le formulaire. Si des fournisseurs commencent à y répondre, leurs données n'apparaîtront PAS dans le dashboard tant que leurs IDs ne sont pas ajoutés dans `scripts/fetch_sheets.py`.
+
+**Action à faire si les sheets 1 ou 2 reçoivent des réponses :**
+
+1. Récupérer l'ID du sheet dans l'URL Google Sheets :
+   `https://docs.google.com/spreadsheets/d/**[ID_ICI]**/edit`
+
+2. Ajouter l'ID dans `scripts/fetch_sheets.py` :
+   ```python
+   SHEET_IDS = {
+       'fr':  '1Ds0deb4YfVSFjEEKSevwC-OdU_V-dAzaOGEFtzejlfk',  # Sheet 3 FR (actif)
+       'en':  '1hZidS721UzcFBFIRi6nwJiqX92QGc3tzvXHGqIZwXns',  # Sheet 4 EN (actif)
+       'fr2': 'ID_DU_SHEET_1_ICI',  # ← Décommenter et compléter si Sheet 1 devient actif
+       # 'fr3': 'ID_DU_SHEET_2_ICI',  # ← Idem pour Sheet 2
+   }
+   ```
+
+3. Relancer `update_data.py` — les nouvelles réponses seront intégrées automatiquement.
+
 ---
 
 ## 2. Structure des fichiers
@@ -252,9 +282,11 @@ Les 5 cartes KPI sont dans un bloc `grid grid-cols-2 md:grid-cols-5`.
 
 ### Comment les fournisseurs entrent dans le dashboard
 
-Le script lit automatiquement **toutes les lignes** du Google Sheet (Sheet 3 FR, Sheet 4 EN)
+Le script lit automatiquement **toutes les lignes** des sheets actifs (Sheet 3 FR et Sheet 4 EN uniquement — voir §1 pour les sheets non lus)
 sauf la ligne d'en-tête. Chaque nouvelle réponse soumise au formulaire Google Forms
 apparaît dans le sheet et sera scorée au prochain run de `update_data.py`.
+
+> ⚠️ **Rappel important :** Les sheets 1 et 2 ne sont PAS lus. Si des fournisseurs répondent via un lien pointant vers ces sheets, leurs données n'apparaîtront pas dans le dashboard. Consulter §1 pour la procédure d'activation.
 
 ### Colonnes importantes dans le Google Sheet
 
