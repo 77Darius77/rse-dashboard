@@ -122,9 +122,34 @@ source venv/bin/activate
 python scripts/update_data.py
 ```
 
-### Sur Windows
+### Sur Windows (update.bat — utilisateur non-technique)
 
 Double-clic sur `windows/update.bat`
+
+### Sur Windows avec VS Code (développeur / modificateur de fichiers)
+
+Si tu modifies des fichiers depuis VS Code avant de mettre à jour le dashboard :
+
+**Configuration initiale (une seule fois) :**
+1. Ouvre le repo dans VS Code
+2. `Ctrl+Shift+P` → **Python: Select Interpreter**
+3. Sélectionne `venv\Scripts\python.exe` (dans le dossier du repo)
+
+VS Code activera automatiquement le venv dans son terminal intégré.
+
+**Workflow quotidien depuis VS Code :**
+```
+Git Pull → modifier les fichiers → Git Push → python scripts/update_data.py
+```
+
+Dans le terminal intégré VS Code (`Ctrl+ù`) :
+```bash
+python scripts/update_data.py
+```
+
+> ⚠️ **Sans cette configuration**, le terminal VS Code utilisera le Python système
+> (sans gspread installé) et produira une erreur `ModuleNotFoundError: gspread`.
+> Le `.bat` n'est pas nécessaire si VS Code est bien configuré.
 
 ### Ce qui se passe
 
