@@ -11,7 +11,7 @@ TOKEN_PATH = os.path.join(os.path.dirname(__file__), 'token.json')
 
 # Chemin vers le fichier client_secret (hors repo, à adapter)
 CLIENT_SECRET_PATH = os.path.expanduser(
-    '~/Documents/client_secret_639409032602-3am2fo7a905h842k3j39tto3rium91vm.apps.googleusercontent.com.json'
+    '~/Documents/client_secret_rse_dashboard.json'
 )
 
 
