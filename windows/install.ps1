@@ -42,6 +42,7 @@ if (-not $pythonCmd) {
     try {
         winget install --id Python.Python.3.12 --silent --accept-package-agreements --accept-source-agreements
         $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH", "User")
+        [Environment]::SetEnvironmentVariable("PATH", $env:PATH, "Process")
         $pythonCmd = "python"
         Write-OK "Python installé avec succès"
     } catch {
@@ -59,6 +60,7 @@ try {
     try {
         winget install --id Git.Git --silent --accept-package-agreements --accept-source-agreements
         $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH", "User")
+        [Environment]::SetEnvironmentVariable("PATH", $env:PATH, "Process")
         Write-OK "Git installé avec succès"
     } catch {
         Write-Fail "Impossible d'installer Git automatiquement. Téléchargez-le : https://git-scm.com/download/win"
@@ -69,8 +71,12 @@ try {
 Write-Step "Récupération du code source..."
 if (Test-Path "$REPO_DIR\.git") {
     Write-Warn "Dossier $REPO_DIR existe déjà. Mise à jour..."
-    git -C $REPO_DIR pull
-    Write-OK "Code source mis à jour"
+    try {
+        git -C $REPO_DIR pull
+        Write-OK "Code source mis à jour"
+    } catch {
+        Write-Fail "Erreur lors de la mise à jour du repo : $_"
+    }
 } else {
     git clone $REPO_URL $REPO_DIR
     Write-OK "Code source cloné dans $REPO_DIR"
@@ -80,16 +86,24 @@ if (Test-Path "$REPO_DIR\.git") {
 Write-Step "Création de l'environnement Python..."
 $venvDir = "$REPO_DIR\venv"
 if (-not (Test-Path $venvDir)) {
-    & $pythonCmd -m venv $venvDir
-    Write-OK "Environnement virtuel créé"
+    try {
+        & $pythonCmd -m venv $venvDir
+        Write-OK "Environnement virtuel créé"
+    } catch {
+        Write-Fail "Erreur lors de la création du venv : $_"
+    }
 } else {
     Write-OK "Environnement virtuel déjà existant"
 }
 
 # ── Étape 5 : Installer les dépendances ──────────────────────────────────
 Write-Step "Installation des dépendances Python..."
-& "$venvDir\Scripts\pip.exe" install -r "$REPO_DIR\requirements.txt" --quiet
-Write-OK "Dépendances installées (gspread, google-auth-oauthlib)"
+try {
+    & "$venvDir\Scripts\pip.exe" install -r "$REPO_DIR\requirements.txt"
+    Write-OK "Dépendances installées depuis requirements.txt"
+} catch {
+    Write-Fail "Erreur lors de l'installation des dépendances : $_"
+}
 
 # ── Étape 6 : Vérifier le fichier client_secret ───────────────────────────
 Write-Step "Vérification du fichier d'authentification Google..."
