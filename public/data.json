@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "last_updated": "2026-02-20T08:00:00Z",
+    "total_responded": 42,
+    "count_fr": 40,
+    "count_en": 2
+  },
+  "collective": {
+    "avg_score": 67.3,
+    "by_pillar": {
+      "gouvernance": 61.2,
+      "droits_humains": 74.1,
+      "sst": 77.8,
+      "ethique": 75.3,
+      "environnement": 52.4,
+      "achats": 68.9
+    },
+    "count_green": 28,
+    "count_amber": 10,
+    "count_red": 4,
+    "top_pillar": "sst",
+    "weak_pillar": "environnement"
+  },
+  "suppliers": [
+    {
+      "id": "igol-picardie",
+      "name": "IGOL PICARDIE ILE DE FRANCE",
+      "email": "contact@igol-picardie.fr",
+      "siret": "57172129900014",
+      "address": "ZI de la Croix Blandin, 51100 Reims",
+      "contact_name": "MACLEOD Eric",
+      "contact_role": "Responsable de Région",
+      "contact_email": "emacleod@igol-picardie.fr",
+      "rse_contact": "Mme Stéphanie CANTO — Responsable QSE",
+      "responded_at": "18/02/2026 08:54:54",
+      "language": "fr",
+      "score_global": 82.1,
+      "level": "green",
+      "scores": {
+        "gouvernance": 75.0,
+        "droits_humains": 100.0,
+        "sst": 100.0,
+        "ethique": 87.5,
+        "environnement": 58.3,
+        "achats": 83.3
+      },
+      "strengths": ["sst", "droits_humains"],
+      "weaknesses": ["environnement"],
+      "recommendations": [
+        "Initier une labellisation RSE (EcoVadis, ISO 26000…)",
+        "Renforcer la politique de réduction carbone",
+        "Mettre en place un bilan carbone annuel"
+      ]
+    },
+    {
+      "id": "total-energie-services",
+      "name": "TOTAL ENERGIE SERVICES",
+      "email": "rse@total-energie.fr",
+      "siret": "31219820400059",
+      "address": "2 Place Jean Millier, 92400 Courbevoie",
+      "contact_name": "MARTIN Sophie",
+      "contact_role": "Directrice RSE",
+      "contact_email": "s.martin@total-energie.fr",
+      "rse_contact": "M. Pierre DUBOIS — Responsable Développement Durable",
+      "responded_at": "17/02/2026 14:22:10",
+      "language": "fr",
+      "score_global": 91.5,
+      "level": "green",
+      "scores": {
+        "gouvernance": 95.0,
+        "droits_humains": 100.0,
+        "sst": 100.0,
+        "ethique": 87.5,
+        "environnement": 75.0,
+        "achats": 91.7
+      },
+      "strengths": ["gouvernance", "sst", "droits_humains"],
+      "weaknesses": ["environnement"],
+      "recommendations": [
+        "Renforcer les objectifs environnementaux avec des KPIs mesurables",
+        "Développer un programme de formation RSE pour les sous-traitants"
+      ]
+    },
+    {
+      "id": "btp-services-nord",
+      "name": "BTP SERVICES NORD",
+      "email": "direction@btp-nord.fr",
+      "siret": "44389201200033",
+      "address": "15 Rue de Dunkerque, 59000 Lille",
+      "contact_name": "LEROY Jean-Pierre",
+      "contact_role": "PDG",
+      "contact_email": "jpleroy@btp-nord.fr",
+      "rse_contact": "Mme Claire FONTAINE — Chargée QSE",
+      "responded_at": "16/02/2026 09:11:33",
+      "language": "fr",
+      "score_global": 74.8,
+      "level": "green",
+      "scores": {
+        "gouvernance": 70.0,
+        "droits_humains": 87.5,
+        "sst": 91.7,
+        "ethique": 75.0,
+        "environnement": 50.0,
+        "achats": 75.0
+      },
+      "strengths": ["sst", "droits_humains"],
+      "weaknesses": ["environnement", "gouvernance"],
+      "recommendations": [
+        "Formaliser une politique RSE écrite et diffusée",
+        "Mettre en place un plan de gestion des déchets de chantier",
+        "Former les managers aux enjeux RSE"
+      ]
+    },
+    {
+      "id": "logistics-express",
+      "name": "LOGISTICS EXPRESS FRANCE",
+      "email": "contact@logistics-express.fr",
+      "siret": "78901234500022",
+      "address": "Zone Logistique, 77290 Mitry-Mory",
+      "contact_name": "BERNARD Thomas",
+      "contact_role": "Directeur Opérations",
+      "contact_email": "t.bernard@logistics-express.fr",
+      "rse_contact": "M. Ahmed BENALI — Responsable HSE",
+      "responded_at": "15/02/2026 16:45:00",
+      "language": "fr",
+      "score_global": 58.3,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 50.0,
+        "droits_humains": 75.0,
+        "sst": 83.3,
+        "ethique": 62.5,
+        "environnement": 33.3,
+        "achats": 50.0
+      },
+      "strengths": ["sst", "droits_humains"],
+      "weaknesses": ["environnement", "gouvernance", "achats"],
+      "recommendations": [
+        "Développer une charte fournisseurs responsables",
+        "Réduire les émissions CO2 de la flotte de véhicules",
+        "Mettre en place une politique d'achats responsables",
+        "Digitaliser les processus pour réduire la consommation de papier"
+      ]
+    },
+    {
+      "id": "green-tech-solutions",
+      "name": "GREEN TECH SOLUTIONS",
+      "email": "info@greentech-solutions.eu",
+      "siret": "90123456700011",
+      "address": "8 Allée de l'Innovation, 31000 Toulouse",
+      "contact_name": "GARCIA Elena",
+      "contact_role": "CEO",
+      "contact_email": "e.garcia@greentech-solutions.eu",
+      "rse_contact": "Mme Elena GARCIA — CEO (référente RSE)",
+      "responded_at": "19/02/2026 10:30:22",
+      "language": "fr",
+      "score_global": 88.7,
+      "level": "green",
+      "scores": {
+        "gouvernance": 90.0,
+        "droits_humains": 100.0,
+        "sst": 91.7,
+        "ethique": 87.5,
+        "environnement": 83.3,
+        "achats": 83.3
+      },
+      "strengths": ["droits_humains", "gouvernance", "environnement"],
+      "weaknesses": [],
+      "recommendations": [
+        "Maintenir la certification ISO 14001",
+        "Partager les bonnes pratiques avec les partenaires"
+      ]
+    },
+    {
+      "id": "acier-industries",
+      "name": "ACIER INDUSTRIES EST",
+      "email": "rh@acier-industries.fr",
+      "siret": "23456789000044",
+      "address": "Route de Metz, 54000 Nancy",
+      "contact_name": "MULLER Franz",
+      "contact_role": "Directeur Industriel",
+      "contact_email": "f.muller@acier-industries.fr",
+      "rse_contact": "M. Robert KLEIN — Responsable HSE",
+      "responded_at": "14/02/2026 11:20:15",
+      "language": "fr",
+      "score_global": 41.2,
+      "level": "red",
+      "scores": {
+        "gouvernance": 35.0,
+        "droits_humains": 50.0,
+        "sst": 58.3,
+        "ethique": 37.5,
+        "environnement": 25.0,
+        "achats": 41.7
+      },
+      "strengths": ["sst"],
+      "weaknesses": ["environnement", "gouvernance", "ethique"],
+      "recommendations": [
+        "Mettre en place une gouvernance RSE formalisée en urgence",
+        "Réaliser un audit environnemental immédiat",
+        "Former 100% des managers aux enjeux RSE",
+        "Établir un code de conduite fournisseurs",
+        "Déployer un plan de réduction des émissions polluantes"
+      ]
+    },
+    {
+      "id": "transport-atlantique",
+      "name": "TRANSPORT ATLANTIQUE",
+      "email": "contact@transport-atlantique.fr",
+      "siret": "56789012300066",
+      "address": "Port de Commerce, 44100 Nantes",
+      "contact_name": "BRIAND Yves",
+      "contact_role": "Gérant",
+      "contact_email": "y.briand@transport-atlantique.fr",
+      "rse_contact": "M. Yves BRIAND — Gérant (référent RSE)",
+      "responded_at": "13/02/2026 08:05:44",
+      "language": "fr",
+      "score_global": 63.4,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 55.0,
+        "droits_humains": 75.0,
+        "sst": 75.0,
+        "ethique": 62.5,
+        "environnement": 50.0,
+        "achats": 66.7
+      },
+      "strengths": ["sst", "droits_humains"],
+      "weaknesses": ["environnement", "gouvernance"],
+      "recommendations": [
+        "Définir une stratégie RSE à 3 ans",
+        "Engager une transition vers une flotte propre",
+        "Renforcer le dialogue avec les parties prenantes"
+      ]
+    },
+    {
+      "id": "chimie-provence",
+      "name": "CHIMIE PROVENCE SOLUTIONS",
+      "email": "direction@chimie-provence.fr",
+      "siret": "67890123400055",
+      "address": "Zone Industrielle de Fos, 13270 Fos-sur-Mer",
+      "contact_name": "RUSSO Antonio",
+      "contact_role": "Directeur Général",
+      "contact_email": "a.russo@chimie-provence.fr",
+      "rse_contact": "Mme Isabelle MOREAU — QHSE",
+      "responded_at": "12/02/2026 13:55:30",
+      "language": "fr",
+      "score_global": 35.6,
+      "level": "red",
+      "scores": {
+        "gouvernance": 30.0,
+        "droits_humains": 50.0,
+        "sst": 50.0,
+        "ethique": 25.0,
+        "environnement": 16.7,
+        "achats": 33.3
+      },
+      "strengths": ["droits_humains", "sst"],
+      "weaknesses": ["environnement", "ethique", "gouvernance"],
+      "recommendations": [
+        "Engager immédiatement un programme de conformité RSE",
+        "Réaliser un audit ICPE complet",
+        "Mettre en place un comité RSE avec mandat clair",
+        "Définir des objectifs environnementaux chiffrés",
+        "Adhérer au Pacte Mondial de l'ONU"
+      ]
+    },
+    {
+      "id": "digital-services-uk",
+      "name": "DIGITAL SERVICES UK LTD",
+      "email": "csr@digitalservicesuk.co.uk",
+      "siret": "UK-789456123",
+      "address": "45 King Street, Manchester M2 7AT, UK",
+      "contact_name": "JOHNSON Robert",
+      "contact_role": "Sustainability Manager",
+      "contact_email": "r.johnson@digitalservicesuk.co.uk",
+      "rse_contact": "Mr. Robert JOHNSON — Sustainability Manager",
+      "responded_at": "11/02/2026 15:40:00",
+      "language": "en",
+      "score_global": 79.2,
+      "level": "green",
+      "scores": {
+        "gouvernance": 80.0,
+        "droits_humains": 87.5,
+        "sst": 83.3,
+        "ethique": 87.5,
+        "environnement": 66.7,
+        "achats": 75.0
+      },
+      "strengths": ["ethique", "droits_humains"],
+      "weaknesses": ["environnement"],
+      "recommendations": [
+        "Align environmental targets with Science Based Targets initiative",
+        "Publish annual sustainability report",
+        "Extend supplier code of conduct to Tier 2 suppliers"
+      ]
+    },
+    {
+      "id": "agro-distribution",
+      "name": "AGRO DISTRIBUTION CENTRE",
+      "email": "qualite@agro-distribution.fr",
+      "siret": "34567890100077",
+      "address": "Route Nationale 20, 45100 Orléans",
+      "contact_name": "PETIT Martine",
+      "contact_role": "Directrice Qualité",
+      "contact_email": "m.petit@agro-distribution.fr",
+      "rse_contact": "Mme Martine PETIT — Directrice Qualité",
+      "responded_at": "10/02/2026 09:25:18",
+      "language": "fr",
+      "score_global": 67.8,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 65.0,
+        "droits_humains": 75.0,
+        "sst": 83.3,
+        "ethique": 62.5,
+        "environnement": 50.0,
+        "achats": 75.0
+      },
+      "strengths": ["sst", "achats"],
+      "weaknesses": ["environnement", "ethique"],
+      "recommendations": [
+        "Obtenir la certification HVE (Haute Valeur Environnementale)",
+        "Réduire l'utilisation de pesticides de 30% d'ici 2027",
+        "Mettre en place une filière d'approvisionnement local"
+      ]
+    },
+    {
+      "id": "energie-renouvelable-ouest",
+      "name": "ENERGIE RENOUVELABLE OUEST",
+      "email": "contact@ero-fr.com",
+      "siret": "45678901200088",
+      "address": "Parc Éolien, 29000 Quimper",
+      "contact_name": "LE GALL Ronan",
+      "contact_role": "Directeur Développement",
+      "contact_email": "r.legall@ero-fr.com",
+      "rse_contact": "M. Ronan LE GALL — Directeur Développement",
+      "responded_at": "09/02/2026 07:50:00",
+      "language": "fr",
+      "score_global": 93.8,
+      "level": "green",
+      "scores": {
+        "gouvernance": 95.0,
+        "droits_humains": 100.0,
+        "sst": 91.7,
+        "ethique": 100.0,
+        "environnement": 91.7,
+        "achats": 91.7
+      },
+      "strengths": ["ethique", "droits_humains", "gouvernance"],
+      "weaknesses": [],
+      "recommendations": [
+        "Partager les meilleures pratiques RSE avec le réseau",
+        "Candidater aux prix RSE sectoriels"
+      ]
+    },
+    {
+      "id": "nettoyage-propre-france",
+      "name": "NETTOYAGE PROPRE FRANCE",
+      "email": "admin@nettoyage-propre.fr",
+      "siret": "89012345600099",
+      "address": "7 Rue des Acacias, 69100 Villeurbanne",
+      "contact_name": "KARIM Hassan",
+      "contact_role": "Gérant",
+      "contact_email": "h.karim@nettoyage-propre.fr",
+      "rse_contact": "M. Hassan KARIM — Gérant",
+      "responded_at": "08/02/2026 12:15:00",
+      "language": "fr",
+      "score_global": 55.0,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 45.0,
+        "droits_humains": 75.0,
+        "sst": 75.0,
+        "ethique": 50.0,
+        "environnement": 41.7,
+        "achats": 50.0
+      },
+      "strengths": ["droits_humains", "sst"],
+      "weaknesses": ["gouvernance", "environnement", "ethique"],
+      "recommendations": [
+        "Adopter des produits de nettoyage éco-labellisés",
+        "Formaliser les procédures de gestion des risques",
+        "Mettre en place un programme de fidélisation responsable des employés"
+      ]
+    },
+    {
+      "id": "tech-innovation-benelux",
+      "name": "TECH INNOVATION BENELUX",
+      "email": "sustainability@tech-innovation.be",
+      "siret": "BE-123456789",
+      "address": "Rue de la Science 23, 1040 Bruxelles, Belgique",
+      "contact_name": "VAN DER BERG Lucas",
+      "contact_role": "Chief Sustainability Officer",
+      "contact_email": "l.vdberg@tech-innovation.be",
+      "rse_contact": "Mr. Lucas VAN DER BERG — CSO",
+      "responded_at": "07/02/2026 16:00:00",
+      "language": "en",
+      "score_global": 85.4,
+      "level": "green",
+      "scores": {
+        "gouvernance": 90.0,
+        "droits_humains": 87.5,
+        "sst": 83.3,
+        "ethique": 87.5,
+        "environnement": 75.0,
+        "achats": 91.7
+      },
+      "strengths": ["gouvernance", "achats"],
+      "weaknesses": ["environnement"],
+      "recommendations": [
+        "Achieve carbon neutrality by 2028",
+        "Implement circular economy principles in product design"
+      ]
+    }
+  ]
+}
