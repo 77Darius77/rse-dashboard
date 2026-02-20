@@ -78,8 +78,12 @@ if (Test-Path "$REPO_DIR\.git") {
         Write-Fail "Erreur lors de la mise à jour du repo : $_"
     }
 } else {
-    git clone $REPO_URL $REPO_DIR
-    Write-OK "Code source cloné dans $REPO_DIR"
+    try {
+        git clone $REPO_URL $REPO_DIR
+        Write-OK "Code source cloné dans $REPO_DIR"
+    } catch {
+        Write-Fail "Erreur lors du clonage du repo : $_"
+    }
 }
 
 # ── Étape 4 : Créer l'environnement virtuel ───────────────────────────────
