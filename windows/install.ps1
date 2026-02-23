@@ -115,12 +115,14 @@ $destSecret = "$env:USERPROFILE\Documents\client_secret_rse_dashboard.json"
 if (Test-Path $destSecret) {
     Write-OK "Fichier client_secret_rse_dashboard.json trouvé dans Documents"
 } else {
-    Write-Warn "FICHIER MANQUANT : $destSecret"
+    Write-Warn "FICHIER PAR DÉFAUT MANQUANT : $destSecret"
     Write-Host ""
-    Write-Host "  Action requise :" -ForegroundColor Yellow
-    Write-Host "  1. Demandez à Blaise le fichier 'client_secret_rse_dashboard.json'" -ForegroundColor Yellow
-    Write-Host "  2. Copiez-le dans : $env:USERPROFILE\Documents\" -ForegroundColor Yellow
-    Write-Host "  3. Relancez update.bat pour commencer" -ForegroundColor Yellow
+    Write-Host "  Note d'authentification :" -ForegroundColor Yellow
+    Write-Host "  Le fichier 'client_secret_rse_dashboard.json' n'a pas été trouvé dans Documents." -ForegroundColor Yellow
+    Write-Host "  Ce n'est pas bloquant pour l'installation !" -ForegroundColor Yellow
+    Write-Host "  Lors du premier lancement de update.bat, une invite noire vous demandera" -ForegroundColor Yellow
+    Write-Host "  de copier-coller le chemin exact vers ce fichier." -ForegroundColor Yellow
+    Write-Host ""
 }
 
 # ── Résumé ────────────────────────────────────────────────────────────────
