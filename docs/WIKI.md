@@ -1,7 +1,9 @@
 # Wiki — Dashboard RSE Fournisseurs
 
 > Documentation complète pour maintenir, modifier et comprendre le projet.
-> Dernière mise à jour : 2026-02-20
+> Dernière mise à jour : 2026-02-23
+>
+> 🌍 **Accès au Dashboard :** [https://77darius77.github.io/rse-dashboard/](https://77darius77.github.io/rse-dashboard/)
 
 ---
 

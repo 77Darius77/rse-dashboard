@@ -132,6 +132,7 @@ Write-Host "   Installation terminée avec succès !   " -ForegroundColor Green
 Write-Host "════════════════════════════════════════" -ForegroundColor Green
 Write-Host ""
 Write-Host "  Dossier du projet : $REPO_DIR" -ForegroundColor White
+Write-Host "  URL du Dashboard  : https://77darius77.github.io/rse-dashboard/" -ForegroundColor White
 Write-Host ""
 Write-Host "  Prochaine étape :" -ForegroundColor White
 Write-Host "  → Double-cliquez sur 'update.bat' pour lancer la mise à jour" -ForegroundColor Cyan
