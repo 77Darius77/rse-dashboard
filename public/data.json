@@ -1,24 +1,24 @@
 {
   "meta": {
-    "last_updated": "2026-02-20T22:00:34.396637",
-    "total_responded": 9,
-    "count_fr": 6,
-    "count_en": 3
+    "last_updated": "2026-02-23T18:08:44.357252",
+    "total_responded": 14,
+    "count_fr": 9,
+    "count_en": 5
   },
   "collective": {
-    "avg_score": 50.9,
+    "avg_score": 51.6,
     "by_pillar": {
-      "gouvernance": 43.7,
-      "droits_humains": 55.6,
-      "sst": 61.1,
-      "ethique": 38.9,
-      "environnement": 53.7,
-      "achats": 50.0
+      "gouvernance": 44.4,
+      "droits_humains": 58.9,
+      "sst": 58.9,
+      "ethique": 39.3,
+      "environnement": 53.6,
+      "achats": 55.4
     },
-    "count_green": 4,
-    "count_amber": 2,
-    "count_red": 3,
-    "top_pillar": "sst",
+    "count_green": 7,
+    "count_amber": 3,
+    "count_red": 4,
+    "top_pillar": "droits_humains",
     "weak_pillar": "ethique"
   },
   "suppliers": [
@@ -155,6 +155,105 @@
       ]
     },
     {
+      "id": "adp-85",
+      "name": "ADP 85",
+      "email": "t.bleteau@adp85.com",
+      "siret": "39889946800027",
+      "address": "12, route de Saint Mars La Réorthe 85590 LES EPESSES",
+      "contact_name": "BLETEAU Tony",
+      "contact_role": "Directeur opérationnel",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "23/02/2026 12:04:05",
+      "language": "fr",
+      "score_global": 76.9,
+      "level": "green",
+      "scores": {
+        "gouvernance": 50.0,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 72.2,
+        "achats": 100.0
+      },
+      "strengths": [
+        "sst",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
+        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+      ]
+    },
+    {
+      "id": "lacoste-dactyl-bureau-&-école",
+      "name": "LACOSTE Dactyl Bureau & École",
+      "email": "severine.rey@lacostedbe.fr",
+      "siret": "444553465",
+      "address": "15 Allée de la Sarriette - ZA Saint Louis - 84250 LE THOR",
+      "contact_name": "REY Séverine",
+      "contact_role": "Directrice services Clients, Qualité & RSE",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "23/02/2026 14:44:23",
+      "language": "fr",
+      "score_global": 73.3,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 50.0,
+        "ethique": 75.0,
+        "environnement": 61.1,
+        "achats": 100.0
+      },
+      "strengths": [
+        "gouvernance",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Mettre en place des actions de réduction de l'empreinte carbone transport",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+      ]
+    },
+    {
+      "id": "octavo-le-mans",
+      "name": "OCTAVO LE MANS",
+      "email": "c.guivarch@octavo.net",
+      "siret": "30354316900021",
+      "address": "ZA LE SABLON - 72230 MULSANNE",
+      "contact_name": "GUIVARCH Coralie",
+      "contact_role": "RESPONSABLE RSE",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "23/02/2026 11:30:19",
+      "language": "fr",
+      "score_global": 67.4,
+      "level": "green",
+      "scores": {
+        "gouvernance": 78.6,
+        "droits_humains": 75.0,
+        "sst": 50.0,
+        "ethique": 25.0,
+        "environnement": 83.3,
+        "achats": 100.0
+      },
+      "strengths": [
+        "environnement",
+        "achats"
+      ],
+      "weaknesses": [
+        "ethique"
+      ],
+      "recommendations": [
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
+        "Créer un système de remontée d'alertes pour les parties prenantes"
+      ]
+    },
+    {
       "id": "monosuisse-ag-and-its-subsidiaries",
       "name": "Monosuisse Ag and its subsidiaries",
       "email": "marco.meraviglia@monosuisse.com",
@@ -217,6 +316,43 @@
         "gouvernance",
         "ethique",
         "environnement",
+        "achats"
+      ],
+      "recommendations": [
+        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
+        "Track basic environmental indicators (energy, water, waste, CO2)",
+        "Establish a stakeholder concern reporting system",
+        "Train employees on CSR topics (ethics, environment, social, OHS)"
+      ]
+    },
+    {
+      "id": "master-cheng-tack-&-hardware-corp.",
+      "name": "Master Cheng Tack & Hardware Corp.",
+      "email": "benrayder@gmail.com",
+      "siret": "133140",
+      "address": "3F, No. 475, Kuang Fu South Rd., Taipei, Taiwan (R.O.C.) 11074",
+      "contact_name": "Benson",
+      "contact_role": "sales Manager",
+      "contact_email": "Benson; sales Manager; director@mastercheng.com.tw",
+      "rse_contact": "Yes",
+      "responded_at": "23/02/2026 08:23:36",
+      "language": "en",
+      "score_global": 47.7,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 7.1,
+        "droits_humains": 100.0,
+        "sst": 75.0,
+        "ethique": 25.0,
+        "environnement": 50.0,
+        "achats": 25.0
+      },
+      "strengths": [
+        "droits_humains"
+      ],
+      "weaknesses": [
+        "gouvernance",
+        "ethique",
         "achats"
       ],
       "recommendations": [
@@ -340,6 +476,45 @@
         "Mesurer les émissions CO2 liées au transport des marchandises (bilan carbone)",
         "Mettre en place des actions de réduction de l'empreinte carbone transport",
         "Mettre en place un suivi et une réduction des déchets"
+      ]
+    },
+    {
+      "id": "oceaking-international-industries-limited",
+      "name": "Oceaking international industries limited",
+      "email": "sales002@bluekin.com",
+      "siret": "70914954-000-07-23-5",
+      "address": "ADDRESS: RM 1110, BLDG 2,HENGWA MANSION,DAGU ROAD HEXI DISTRICT,TIANJIN CHINA 300202",
+      "contact_name": "Katherine wang",
+      "contact_role": "Sales",
+      "contact_email": "Katherine , sales , sales002@bluekin.com",
+      "rse_contact": "No",
+      "responded_at": "21/02/2026 05:48:52",
+      "language": "en",
+      "score_global": 0.0,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 0.0,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement",
+        "achats"
+      ],
+      "recommendations": [
+        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
+        "Publish an annual CSR/sustainability report (GRI guidelines available)",
+        "Measure CO2 emissions related to goods transport (carbon footprint)",
+        "Implement actions to reduce transport-related carbon footprint",
+        "Track basic environmental indicators (energy, water, waste, CO2)"
       ]
     }
   ]
