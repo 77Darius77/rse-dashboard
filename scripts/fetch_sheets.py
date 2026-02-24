@@ -6,6 +6,7 @@ from auth import get_credentials
 SHEET_IDS = {
     'fr': '1Ds0deb4YfVSFjEEKSevwC-OdU_V-dAzaOGEFtzejlfk',
     'en': '1hZidS721UzcFBFIRi6nwJiqX92QGc3tzvXHGqIZwXns',
+    'cn': '1GHbnY0o34WUhY-Cl0C2MoZLC5uXWeiXxOt6lbDqNCBA',
 }
 
 TAB_NAME = 'Réponses au formulaire 1'

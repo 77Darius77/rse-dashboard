@@ -53,6 +53,9 @@ PILLAR_COLUMNS_EN = {
     'achats':         [37, 40],
 }
 
+# Mapping colonnes → pilier pour le sheet CN (indices 0-based, utilisation des memes que EN par défaut)
+PILLAR_COLUMNS_CN = PILLAR_COLUMNS_EN.copy()
+
 # Questions clés pour les recommandations (col index → message si réponse faible)
 KEY_RECOMMENDATIONS_FR = {
     10: "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
@@ -75,6 +78,8 @@ KEY_RECOMMENDATIONS_EN = {
     18: "Establish a stakeholder concern reporting system",
     40: "Train employees on CSR topics (ethics, environment, social, OHS)",
 }
+
+KEY_RECOMMENDATIONS_CN = KEY_RECOMMENDATIONS_EN.copy()
 
 # Indices des colonnes métadonnées (communes FR et EN)
 META_COLUMNS = {

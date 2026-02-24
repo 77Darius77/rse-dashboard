@@ -1,7 +1,7 @@
 """Moteur de calcul des scores RSE par pilier et global."""
 
-from pillar_mapping import PILLAR_WEIGHTS, PILLAR_COLUMNS_FR, PILLAR_COLUMNS_EN
-from pillar_mapping import KEY_RECOMMENDATIONS_FR, KEY_RECOMMENDATIONS_EN, META_COLUMNS
+from pillar_mapping import PILLAR_WEIGHTS, PILLAR_COLUMNS_FR, PILLAR_COLUMNS_EN, PILLAR_COLUMNS_CN
+from pillar_mapping import KEY_RECOMMENDATIONS_FR, KEY_RECOMMENDATIONS_EN, KEY_RECOMMENDATIONS_CN, META_COLUMNS
 
 
 def score_answer(value) -> float:
@@ -35,8 +35,15 @@ def get_level(score: float) -> str:
 
 def score_supplier(row: list, language: str = 'fr') -> dict:
     """Calcule tous les scores et métadonnées pour un fournisseur."""
-    pillar_cols = PILLAR_COLUMNS_FR if language == 'fr' else PILLAR_COLUMNS_EN
-    reco_map = KEY_RECOMMENDATIONS_FR if language == 'fr' else KEY_RECOMMENDATIONS_EN
+    if language == 'fr':
+        pillar_cols = PILLAR_COLUMNS_FR
+        reco_map = KEY_RECOMMENDATIONS_FR
+    elif language == 'cn':
+        pillar_cols = PILLAR_COLUMNS_CN
+        reco_map = KEY_RECOMMENDATIONS_CN
+    else:
+        pillar_cols = PILLAR_COLUMNS_EN
+        reco_map = KEY_RECOMMENDATIONS_EN
 
     pillar_scores = {
         pillar: score_pillar(row, cols)

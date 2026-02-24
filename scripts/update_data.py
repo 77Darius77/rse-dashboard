@@ -40,6 +40,7 @@ def build_data_json(sheets_data: dict) -> dict:
             'total_responded': len(all_suppliers),
             'count_fr': sum(1 for s in all_suppliers if s['language'] == 'fr'),
             'count_en': sum(1 for s in all_suppliers if s['language'] == 'en'),
+            'count_cn': sum(1 for s in all_suppliers if s['language'] == 'cn'),
         },
         'collective': collective,
         'suppliers': all_suppliers,
