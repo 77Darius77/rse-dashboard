@@ -1,23 +1,24 @@
 {
   "meta": {
-    "last_updated": "2026-02-24T08:53:13.744389",
-    "total_responded": 14,
+    "last_updated": "2026-02-24T09:06:44.442995",
+    "total_responded": 15,
     "count_fr": 9,
-    "count_en": 5
+    "count_en": 5,
+    "count_cn": 1
   },
   "collective": {
-    "avg_score": 51.6,
+    "avg_score": 49.0,
     "by_pillar": {
-      "gouvernance": 44.4,
-      "droits_humains": 58.9,
-      "sst": 58.9,
-      "ethique": 39.3,
-      "environnement": 53.6,
-      "achats": 55.4
+      "gouvernance": 41.4,
+      "droits_humains": 55.0,
+      "sst": 55.0,
+      "ethique": 36.7,
+      "environnement": 52.2,
+      "achats": 55.0
     },
     "count_green": 7,
     "count_amber": 3,
-    "count_red": 4,
+    "count_red": 5,
     "top_pillar": "droits_humains",
     "weak_pillar": "ethique"
   },
@@ -398,6 +399,44 @@
         "Mettre en place un suivi et une réduction des déchets",
         "Créer un système de remontée d'alertes pour les parties prenantes",
         "Former les collaborateurs aux enjeux RSE (éthique, environnement, social)"
+      ]
+    },
+    {
+      "id": "lacme-dafeng-machinery-co.,ltd",
+      "name": "Lacme Dafeng Machinery Co.,Ltd",
+      "email": "maxime@lacmedf.com",
+      "siret": "91320982717447651A",
+      "address": "4, Xikang Lu, Industrial Zone, Dafeng Zone, 224100 Jiangsu,PRC",
+      "contact_name": "Maxime Zhanghuijun",
+      "contact_role": "General Manager",
+      "contact_email": "Maxime Zhang, GM, maxime@lacmedf.com",
+      "rse_contact": "No",
+      "responded_at": "24/02/2026 04:09:34",
+      "language": "cn",
+      "score_global": 11.7,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 33.3,
+        "achats": 50.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement"
+      ],
+      "recommendations": [
+        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
+        "Publish an annual CSR/sustainability report (GRI guidelines available)",
+        "Measure CO2 emissions related to goods transport (carbon footprint)",
+        "Implement actions to reduce transport-related carbon footprint",
+        "Track basic environmental indicators (energy, water, waste, CO2)"
       ]
     },
     {
