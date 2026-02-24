@@ -2,7 +2,7 @@
 # Met a jour le dashboard RSE depuis les Google Sheets
 # Usage : double-clic sur update.bat
 
-$REPO_DIR = "$env:USERPROFILE\Documents\rse-dashboard"
+$REPO_DIR = "C:\rse-dashboard"
 $VENV_PYTHON = "$REPO_DIR\venv\Scripts\python.exe"
 $DASHBOARD_URL = "https://77darius77.github.io/rse-dashboard/"
 
