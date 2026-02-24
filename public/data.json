@@ -1,23 +1,23 @@
 {
   "meta": {
-    "last_updated": "2026-02-24T10:02:46.026583",
-    "total_responded": 15,
-    "count_fr": 9,
-    "count_en": 5,
+    "last_updated": "2026-02-24T15:52:17.524086",
+    "total_responded": 17,
+    "count_fr": 10,
+    "count_en": 6,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 49.0,
+    "avg_score": 51.0,
     "by_pillar": {
-      "gouvernance": 41.4,
-      "droits_humains": 55.0,
-      "sst": 55.0,
-      "ethique": 36.7,
-      "environnement": 52.2,
-      "achats": 55.0
+      "gouvernance": 45.8,
+      "droits_humains": 58.8,
+      "sst": 58.8,
+      "ethique": 38.2,
+      "environnement": 51.3,
+      "achats": 52.9
     },
-    "count_green": 7,
-    "count_amber": 3,
+    "count_green": 8,
+    "count_amber": 4,
     "count_red": 5,
     "top_pillar": "droits_humains",
     "weak_pillar": "ethique"
@@ -156,6 +156,39 @@
       ]
     },
     {
+      "id": "columbia-france",
+      "name": "COLUMBIA FRANCE",
+      "email": "qualite@columbiafrance.fr",
+      "siret": "38220196000046",
+      "address": "5 rue des Ajoncs ZA de Vaucouleurs 22980 VILDE-GUINGALAN",
+      "contact_name": "Manon SOUCHET",
+      "contact_role": "Animatrice QSE",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "24/02/2026 11:25:08",
+      "language": "fr",
+      "score_global": 77.2,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 55.6,
+        "achats": 50.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Mesurer les émissions CO2 liées au transport des marchandises (bilan carbone)",
+        "Mettre en place des actions de réduction de l'empreinte carbone transport",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+      ]
+    },
+    {
       "id": "adp-85",
       "name": "ADP 85",
       "email": "t.bleteau@adp85.com",
@@ -285,6 +318,42 @@
       ],
       "recommendations": [
         "Track basic environmental indicators (energy, water, waste, CO2)",
+        "Train employees on CSR topics (ethics, environment, social, OHS)"
+      ]
+    },
+    {
+      "id": "shenzhen-carku-technology-co.,-ltd",
+      "name": "Shenzhen Carku Technology Co., Ltd",
+      "email": "besty@carku.com",
+      "siret": "91440300576363752R",
+      "address": "Building A, Qixing Creative Square, Lianrun Rd., Gaofeng Community, Dalang Street, Longhua District, Shenzhen,Guangdong,China",
+      "contact_name": "Besty Xiang",
+      "contact_role": "Foreign sales manager",
+      "contact_email": "Sen Su, Quality Manager, su@car-ku.com",
+      "rse_contact": "Yes",
+      "responded_at": "24/02/2026 12:14:38",
+      "language": "en",
+      "score_global": 55.8,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 64.3,
+        "droits_humains": 100.0,
+        "sst": 75.0,
+        "ethique": 25.0,
+        "environnement": 33.3,
+        "achats": 25.0
+      },
+      "strengths": [
+        "droits_humains"
+      ],
+      "weaknesses": [
+        "ethique",
+        "environnement",
+        "achats"
+      ],
+      "recommendations": [
+        "Track basic environmental indicators (energy, water, waste, CO2)",
+        "Set up waste monitoring and reduction processes",
         "Train employees on CSR topics (ethics, environment, social, OHS)"
       ]
     },
