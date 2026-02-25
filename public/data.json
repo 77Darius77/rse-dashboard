@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_updated": "2026-02-24T16:30:35.460760",
-    "total_responded": 17,
-    "count_fr": 10,
-    "count_en": 6,
+    "last_updated": "2026-02-25T14:24:44.645873",
+    "total_responded": 20,
+    "count_fr": 12,
+    "count_en": 7,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 51.0,
+    "avg_score": 48.8,
     "by_pillar": {
-      "gouvernance": 45.8,
-      "droits_humains": 58.8,
-      "sst": 58.8,
-      "ethique": 38.2,
-      "environnement": 51.3,
-      "achats": 52.9
+      "gouvernance": 43.6,
+      "droits_humains": 53.8,
+      "sst": 55.0,
+      "ethique": 36.2,
+      "environnement": 53.0,
+      "achats": 50.0
     },
-    "count_green": 8,
+    "count_green": 9,
     "count_amber": 4,
-    "count_red": 5,
-    "top_pillar": "droits_humains",
+    "count_red": 7,
+    "top_pillar": "sst",
     "weak_pillar": "ethique"
   },
   "suppliers": [
@@ -119,6 +119,38 @@
         "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
         "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
         "Créer un système de remontée d'alertes pour les parties prenantes"
+      ]
+    },
+    {
+      "id": "antalis-france",
+      "name": "Antalis France",
+      "email": "pauline.darfeuille@antalis.com",
+      "siret": "41033076500547",
+      "address": "17 avenue de la porte des lilas, 75019 Paris",
+      "contact_name": "Pauline DARFEUILLE",
+      "contact_role": "Responsable ESG",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "24/02/2026 17:30:28",
+      "language": "fr",
+      "score_global": 80.5,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 72.2,
+        "achats": 50.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
+        "Mettre en place un suivi et une réduction des déchets"
       ]
     },
     {
@@ -430,6 +462,81 @@
         "Track basic environmental indicators (energy, water, waste, CO2)",
         "Establish a stakeholder concern reporting system",
         "Train employees on CSR topics (ethics, environment, social, OHS)"
+      ]
+    },
+    {
+      "id": "vision-plast-france",
+      "name": "VISION PLAST FRANCE",
+      "email": "sylvain.chereau@vision-plast.com",
+      "siret": "50003298200018",
+      "address": "Parc d'activité de la bertraie 72270 Villaines sous Malicorne",
+      "contact_name": "Chereau Sylvain",
+      "contact_role": "Directeur Usine",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "25/02/2026 13:44:07",
+      "language": "fr",
+      "score_global": 14.4,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 72.2,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
+        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
+        "Créer un système de remontée d'alertes pour les parties prenantes",
+        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social)"
+      ]
+    },
+    {
+      "id": "helukabel-eltrona-sp.-z-o.o.",
+      "name": "Helukabel Eltrona sp. z o.o.",
+      "email": "artur-zmuda@eltron-kabel.pl",
+      "siret": "6320100775",
+      "address": "ul. Rozwojowa 14 43-600 Jaworzno",
+      "contact_name": "Artur Żmuda",
+      "contact_role": "Production Director",
+      "contact_email": "Tomasz Czopik, Quality engineer, tomasz.czopik@eltron-kabel.pl",
+      "rse_contact": "No",
+      "responded_at": "25/02/2026 10:58:30",
+      "language": "en",
+      "score_global": 13.9,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 44.4,
+        "achats": 50.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement"
+      ],
+      "recommendations": [
+        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
+        "Publish an annual CSR/sustainability report (GRI guidelines available)",
+        "Measure CO2 emissions related to goods transport (carbon footprint)",
+        "Track basic environmental indicators (energy, water, waste, CO2)",
+        "Establish a stakeholder concern reporting system"
       ]
     },
     {
