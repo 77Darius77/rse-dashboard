@@ -1,28 +1,60 @@
 {
   "meta": {
-    "last_updated": "2026-02-25T14:24:44.645873",
-    "total_responded": 20,
-    "count_fr": 12,
+    "last_updated": "2026-02-25T17:35:31.378636",
+    "total_responded": 21,
+    "count_fr": 13,
     "count_en": 7,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 48.8,
+    "avg_score": 50.6,
     "by_pillar": {
-      "gouvernance": 43.6,
-      "droits_humains": 53.8,
-      "sst": 55.0,
-      "ethique": 36.2,
-      "environnement": 53.0,
-      "achats": 50.0
+      "gouvernance": 45.9,
+      "droits_humains": 54.8,
+      "sst": 57.1,
+      "ethique": 38.1,
+      "environnement": 54.2,
+      "achats": 52.4
     },
-    "count_green": 9,
+    "count_green": 10,
     "count_amber": 4,
     "count_red": 7,
     "top_pillar": "sst",
     "weak_pillar": "ethique"
   },
   "suppliers": [
+    {
+      "id": "contac-solutions-ab",
+      "name": "Contac Solutions AB",
+      "email": "frederic.alonzo@contac.se",
+      "siret": "SE556742202601",
+      "address": "Rinnavägen 6, 51733 Bollebygd",
+      "contact_name": "Alonzo Frédéric",
+      "contact_role": "Area Manager",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "25/02/2026 15:50:48",
+      "language": "fr",
+      "score_global": 86.6,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 77.8,
+        "achats": 100.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+      ]
+    },
     {
       "id": "cenpac",
       "name": "CENPAC",
