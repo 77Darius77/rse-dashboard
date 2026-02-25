@@ -1049,7 +1049,7 @@
           try {
             this.loading = true;
             this.error = null;
-            const res = await fetch('public/data.json');
+            const res = await fetch('public/data.json?t=' + new Date().getTime());
             if (!res.ok) throw new Error('Impossible de charger les données (HTTP ' + res.status + ')');
             this.data = await res.json();
 
