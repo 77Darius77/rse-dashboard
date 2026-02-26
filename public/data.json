@@ -1,24 +1,24 @@
 {
   "meta": {
-    "last_updated": "2026-02-25T17:35:31.378636",
-    "total_responded": 21,
-    "count_fr": 13,
+    "last_updated": "2026-02-26T17:12:11.180651",
+    "total_responded": 22,
+    "count_fr": 14,
     "count_en": 7,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 50.6,
+    "avg_score": 48.9,
     "by_pillar": {
-      "gouvernance": 45.9,
-      "droits_humains": 54.8,
-      "sst": 57.1,
-      "ethique": 38.1,
-      "environnement": 54.2,
-      "achats": 52.4
+      "gouvernance": 43.8,
+      "droits_humains": 52.3,
+      "sst": 54.5,
+      "ethique": 36.4,
+      "environnement": 54.5,
+      "achats": 50.0
     },
     "count_green": 10,
     "count_amber": 4,
-    "count_red": 7,
+    "count_red": 8,
     "top_pillar": "sst",
     "weak_pillar": "ethique"
   },
@@ -607,6 +607,44 @@
         "Mettre en place un suivi et une réduction des déchets",
         "Créer un système de remontée d'alertes pour les parties prenantes",
         "Former les collaborateurs aux enjeux RSE (éthique, environnement, social)"
+      ]
+    },
+    {
+      "id": "atelier-serigraphique",
+      "name": "atelier serigraphique",
+      "email": "contact@atelier-serigraphik.com",
+      "siret": "33832171400028",
+      "address": "Parc d'activité de la mine",
+      "contact_name": "Patrick VERRE",
+      "contact_role": "DIRECTION",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "26/02/2026 12:26:14",
+      "language": "fr",
+      "score_global": 12.2,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 61.1,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
+        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
+        "Mesurer les émissions CO2 liées au transport des marchandises (bilan carbone)",
+        "Mettre en place un suivi et une réduction des déchets",
+        "Créer un système de remontée d'alertes pour les parties prenantes"
       ]
     },
     {
