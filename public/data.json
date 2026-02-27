@@ -1,22 +1,22 @@
 {
   "meta": {
-    "last_updated": "2026-02-26T17:12:11.180651",
-    "total_responded": 22,
-    "count_fr": 14,
+    "last_updated": "2026-02-27T12:24:34.771786",
+    "total_responded": 23,
+    "count_fr": 15,
     "count_en": 7,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 48.9,
+    "avg_score": 50.5,
     "by_pillar": {
-      "gouvernance": 43.8,
-      "droits_humains": 52.3,
-      "sst": 54.5,
-      "ethique": 36.4,
-      "environnement": 54.5,
-      "achats": 50.0
+      "gouvernance": 46.0,
+      "droits_humains": 53.3,
+      "sst": 56.5,
+      "ethique": 38.0,
+      "environnement": 55.6,
+      "achats": 52.2
     },
-    "count_green": 10,
+    "count_green": 11,
     "count_amber": 4,
     "count_red": 8,
     "top_pillar": "sst",
@@ -34,6 +34,38 @@
       "contact_email": "",
       "rse_contact": "",
       "responded_at": "25/02/2026 15:50:48",
+      "language": "fr",
+      "score_global": 86.6,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 77.8,
+        "achats": 100.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+      ]
+    },
+    {
+      "id": "rexel",
+      "name": "REXEL",
+      "email": "maud.derre@rexel.fr",
+      "siret": "30930461605851",
+      "address": "13 Boulevard du Fort de Vaux 75017 PARIS",
+      "contact_name": "DERRE Maud",
+      "contact_role": "Assistante de Direction Régionale Clients Finaux",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "27/02/2026 09:22:58",
       "language": "fr",
       "score_global": 86.6,
       "level": "green",
