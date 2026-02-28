@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated": "2026-02-27T12:24:34.771786",
+    "last_updated": "2026-02-28T14:20:09.121549",
     "total_responded": 23,
     "count_fr": 15,
     "count_en": 7,
@@ -52,7 +52,8 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
       ]
     },
     {
@@ -84,7 +85,8 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
       ]
     },
     {
@@ -116,7 +118,8 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mettre en place un comptage de la consommation d'eau et définir des objectifs de réduction"
       ]
     },
     {
@@ -147,9 +150,9 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
-        "Mettre en place un suivi et une réduction des déchets"
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mettre en place un plan de suivi et de réduction des déchets à la source",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)"
       ]
     },
     {
@@ -180,9 +183,9 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
-        "Créer un système de remontée d'alertes pour les parties prenantes"
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
       ]
     },
     {
@@ -213,8 +216,9 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
-        "Mettre en place un suivi et une réduction des déchets"
+        "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mettre en place un plan de suivi et de réduction des déchets à la source"
       ]
     },
     {
@@ -245,10 +249,11 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Mettre en place des actions de réduction de l'empreinte carbone transport",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Engager une démarche d'éco-conception pour réduire l'impact environnemental des produits (matériaux recyclés, réduction des emballages, durabilité, ACV)",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)"
       ]
     },
     {
@@ -279,9 +284,11 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Mesurer les émissions CO2 liées au transport des marchandises (bilan carbone)",
-        "Mettre en place des actions de réduction de l'empreinte carbone transport",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mesurer les émissions de CO2 liées au transport des marchandises (bilan carbone transport)",
+        "Engager une démarche d'éco-conception pour réduire l'impact environnemental des produits (matériaux recyclés, réduction des emballages, durabilité, ACV)"
       ]
     },
     {
@@ -312,9 +319,11 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
       ]
     },
     {
@@ -345,8 +354,10 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Mettre en place des actions de réduction de l'empreinte carbone transport",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)"
+        "Formaliser un Document Unique d'Évaluation des Risques (DUER) et une politique SST",
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Engager une démarche d'éco-conception pour réduire l'impact environnemental des produits (matériaux recyclés, réduction des emballages, durabilité, ACV)"
       ]
     },
     {
@@ -379,8 +390,10 @@
         "ethique"
       ],
       "recommendations": [
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, CO2)",
-        "Créer un système de remontée d'alertes pour les parties prenantes"
+        "Adopter une charte éthique couvrant la lutte anti-corruption, les conflits d'intérêts et la conformité réglementaire (Sapin II)",
+        "Formaliser un Document Unique d'Évaluation des Risques (DUER) et une politique SST",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
       ]
     },
     {
@@ -413,8 +426,9 @@
         "achats"
       ],
       "recommendations": [
-        "Track basic environmental indicators (energy, water, waste, CO2)",
-        "Train employees on CSR topics (ethics, environment, social, OHS)"
+        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social, SST)",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Réduire l'empreinte carbone liée au transport (optimisation logistique, véhicules propres, plan de mobilité)"
       ]
     },
     {
@@ -448,9 +462,11 @@
         "achats"
       ],
       "recommendations": [
-        "Track basic environmental indicators (energy, water, waste, CO2)",
-        "Set up waste monitoring and reduction processes",
-        "Train employees on CSR topics (ethics, environment, social, OHS)"
+        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social, SST)",
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mettre en place un plan de suivi et de réduction des déchets à la source",
+        "Déployer des actions d'efficacité énergétique (LED, isolation, équipements moins énergivores, énergies renouvelables)"
       ]
     },
     {
@@ -485,10 +501,11 @@
         "achats"
       ],
       "recommendations": [
-        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
-        "Track basic environmental indicators (energy, water, waste, CO2)",
-        "Establish a stakeholder concern reporting system",
-        "Train employees on CSR topics (ethics, environment, social, OHS)"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes"
       ]
     },
     {
@@ -522,10 +539,11 @@
         "achats"
       ],
       "recommendations": [
-        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
-        "Track basic environmental indicators (energy, water, waste, CO2)",
-        "Establish a stakeholder concern reporting system",
-        "Train employees on CSR topics (ethics, environment, social, OHS)"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes"
       ]
     },
     {
@@ -559,10 +577,11 @@
         "achats"
       ],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Créer un système de remontée d'alertes pour les parties prenantes",
-        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social)"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -596,11 +615,11 @@
         "environnement"
       ],
       "recommendations": [
-        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
-        "Publish an annual CSR/sustainability report (GRI guidelines available)",
-        "Measure CO2 emissions related to goods transport (carbon footprint)",
-        "Track basic environmental indicators (energy, water, waste, CO2)",
-        "Establish a stakeholder concern reporting system"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -634,11 +653,11 @@
         "achats"
       ],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Mettre en place un suivi et une réduction des déchets",
-        "Créer un système de remontée d'alertes pour les parties prenantes",
-        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social)"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -672,11 +691,11 @@
         "achats"
       ],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Mesurer les émissions CO2 liées au transport des marchandises (bilan carbone)",
-        "Mettre en place un suivi et une réduction des déchets",
-        "Créer un système de remontée d'alertes pour les parties prenantes"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -710,11 +729,11 @@
         "environnement"
       ],
       "recommendations": [
-        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
-        "Publish an annual CSR/sustainability report (GRI guidelines available)",
-        "Measure CO2 emissions related to goods transport (carbon footprint)",
-        "Implement actions to reduce transport-related carbon footprint",
-        "Track basic environmental indicators (energy, water, waste, CO2)"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -749,11 +768,11 @@
         "achats"
       ],
       "recommendations": [
-        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
-        "Publish an annual CSR/sustainability report (GRI guidelines available)",
-        "Measure CO2 emissions related to goods transport (carbon footprint)",
-        "Track basic environmental indicators (energy, water, waste, CO2)",
-        "Establish a stakeholder concern reporting system"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -788,11 +807,11 @@
         "achats"
       ],
       "recommendations": [
-        "Initier une démarche de labellisation RSE (EcoVadis, ISO 26000, B Corp...)",
-        "Publier un rapport RSE ou développement durable annuel (guide GRI disponible)",
-        "Mesurer les émissions CO2 liées au transport des marchandises (bilan carbone)",
-        "Mettre en place des actions de réduction de l'empreinte carbone transport",
-        "Mettre en place un suivi et une réduction des déchets"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
@@ -827,11 +846,11 @@
         "achats"
       ],
       "recommendations": [
-        "Pursue third-party CSR labelling (EcoVadis, ISO 26000, B Corp...)",
-        "Publish an annual CSR/sustainability report (GRI guidelines available)",
-        "Measure CO2 emissions related to goods transport (carbon footprint)",
-        "Implement actions to reduce transport-related carbon footprint",
-        "Track basic environmental indicators (energy, water, waste, CO2)"
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     }
   ]
