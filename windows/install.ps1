@@ -115,14 +115,33 @@ $destSecret = "$env:USERPROFILE\Documents\client_secret_rse_dashboard.json"
 if (Test-Path $destSecret) {
     Write-OK "Fichier client_secret_rse_dashboard.json trouvé dans Documents"
 } else {
-    Write-Warn "FICHIER PAR DÉFAUT MANQUANT : $destSecret"
+    Write-Warn "Fichier client_secret_rse_dashboard.json introuvable dans Documents."
     Write-Host ""
-    Write-Host "  Note d'authentification :" -ForegroundColor Yellow
-    Write-Host "  Le fichier 'client_secret_rse_dashboard.json' n'a pas été trouvé dans Documents." -ForegroundColor Yellow
-    Write-Host "  Ce n'est pas bloquant pour l'installation !" -ForegroundColor Yellow
-    Write-Host "  Lors du premier lancement de update.bat, une invite noire vous demandera" -ForegroundColor Yellow
-    Write-Host "  de copier-coller le chemin exact vers ce fichier." -ForegroundColor Yellow
+    Write-Host "  Ce fichier est nécessaire pour accéder aux Google Sheets." -ForegroundColor Yellow
+    Write-Host "  Demandez-le à Blaise si vous ne l'avez pas." -ForegroundColor Yellow
     Write-Host ""
+
+    $srcSecret = ""
+    while ($srcSecret -eq "" -or -not (Test-Path $srcSecret)) {
+        $srcSecret = Read-Host "  Entrez le chemin complet du fichier client_secret_rse_dashboard.json (ou appuyez sur Entrée pour ignorer)"
+        if ($srcSecret -eq "") {
+            Write-Warn "Ignoré. Vous devrez fournir ce fichier lors du premier lancement de update.bat."
+            break
+        }
+        if (-not (Test-Path $srcSecret)) {
+            Write-Host "  Fichier introuvable : $srcSecret" -ForegroundColor Red
+            $srcSecret = ""
+        }
+    }
+
+    if ($srcSecret -ne "" -and (Test-Path $srcSecret)) {
+        try {
+            Copy-Item $srcSecret $destSecret
+            Write-OK "Fichier copié dans Documents\"
+        } catch {
+            Write-Warn "Impossible de copier le fichier : $_"
+        }
+    }
 }
 
 # ── Résumé ────────────────────────────────────────────────────────────────
