@@ -56,6 +56,7 @@ function radarDefaults(labels, values, label, color) {
     options: {
       responsive: true,
       maintainAspectRatio: true,
+      layout: { padding: { left: 30, right: 30, top: 10, bottom: 10 } },
       plugins: { legend: { display: false } },
       scales: {
         r: {
@@ -312,7 +313,9 @@ function app() {
       const pillars = Object.keys(this.data.collective.by_pillar);
       const labels = pillars.map(p => PILLAR_LABELS[p] || p);
       const values = pillars.map(p => this.data.collective.by_pillar[p]);
-      new Chart(canvas, radarDefaults(labels, values, 'Score collectif', '#00A896'));
+      const cfg = radarDefaults(labels, values, 'Score collectif', '#00A896');
+      cfg.options.aspectRatio = 1.25;
+      new Chart(canvas, cfg);
     },
 
     drawSupplierRadar(s) {

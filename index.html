@@ -221,14 +221,15 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
           <!-- Radar collectif -->
-          <div class="card">
+          <div class="card self-start" style="padding-top:0.75rem; padding-bottom:0.75rem;">
             <h2 class="section-title flex items-center gap-2">
               <i data-lucide="radar" class="w-4 h-4 text-accent"></i>
               Radar RSE Collectif
             </h2>
-            <div class="radar-container">
-              <canvas id="radarCollectif" height="300"></canvas>
+            <div class="radar-container" style="max-width:100%;">
+              <canvas id="radarCollectif" height="240"></canvas>
             </div>
+            <span x-on:rse-theme-changed.window="initCharts()"></span>
           </div>
 
           <!-- Forces & Lacunes -->
