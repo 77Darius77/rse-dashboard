@@ -1,0 +1,541 @@
+/* ===== BASE ===== */
+[x-cloak] {
+  display: none !important;
+}
+
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+  padding: 1.25rem;
+}
+
+.badge-green {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-amber {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-red {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: #4b5563;
+  border: none;
+  background: none;
+}
+
+.nav-link:hover {
+  background-color: #f3f4f6;
+  color: #1B3F6E;
+}
+
+.nav-link.active {
+  background-color: #1B3F6E;
+  color: white;
+}
+
+.nav-link.active:hover {
+  background-color: #152f52;
+}
+
+.progress-bar {
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+.score-mini-bar {
+  height: 4px;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+.kpi-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #f3f4f6;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.supplier-row {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.supplier-row:hover {
+  background-color: #f0f9ff;
+}
+
+.radar-container {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.comparison-radar {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.scroll-area {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1B3F6E;
+  margin-bottom: 0.75rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+
+  /* ── Page A4 une seule page ── */
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
+  /* Conserver les couleurs à l'impression */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    background: white !important;
+  }
+
+  /* Masquer nav, boutons, autres vues */
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  /* ── Conteneur fiche : mise en page compacte ── */
+  .print-fiche {
+    /* Forcer une seule page */
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Réduire les espaces entre sections */
+  .print-fiche>*+* {
+    margin-top: 0.6rem !important;
+  }
+
+  /* Forcer le 2-colonnes (sinon grilles s'empilent en print) */
+  .print-fiche .grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Compacter les cartes */
+  .print-fiche .card {
+    padding: 0.75rem !important;
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb !important;
+    break-inside: avoid !important;
+  }
+
+  /* Compacter les listes internes */
+  .print-fiche .space-y-3>*+* {
+    margin-top: 0.5rem !important;
+  }
+
+  .print-fiche .space-y-4>*+* {
+    margin-top: 0.8rem !important;
+  }
+
+  /* Réduire légèrement la taille de police des recommandations */
+  .print-fiche .text-sm {
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .print-fiche .text-xs {
+    font-size: 0.72rem !important;
+  }
+
+  /* Titres de section */
+  .print-fiche .section-title {
+    margin-bottom: 0.4rem !important;
+  }
+
+  /* Radar : redimensionnement proportionnel au container A4 */
+  .print-fiche .radar-container {
+    max-width: 260px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .print-fiche .radar-container canvas {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  /* ── Profil RSE : radar légèrement agrandi ── */
+  .print-fiche .profil-rse-grid .radar-container canvas {
+    max-height: 286px !important;
+  }
+
+  /* Forcer l'affichage des éléments Alpine */
+  [x-cloak] {
+    display: block !important;
+  }
+
+  /* ── Forcer thème clair à l'impression (même si dark mode actif) ── */
+  html,
+  body {
+    color: #111827 !important;
+    background: white !important;
+  }
+
+  .card,
+  .kpi-card {
+    background-color: white !important;
+    border-color: #e5e7eb !important;
+  }
+
+  .section-title {
+    color: #1B3F6E !important;
+  }
+
+  .progress-bar,
+  .score-mini-bar {
+    background-color: #e5e7eb !important;
+  }
+
+  .badge-green {
+    background-color: #dcfce7 !important;
+    color: #166534 !important;
+  }
+
+  .badge-amber {
+    background-color: #fef3c7 !important;
+    color: #92400e !important;
+  }
+
+  .badge-red {
+    background-color: #fee2e2 !important;
+    color: #991b1b !important;
+  }
+
+  /* Réinitialiser les surcharges Tailwind du dark mode */
+  .bg-white {
+    background-color: white !important;
+  }
+
+  .bg-gray-50 {
+    background-color: #f9fafb !important;
+  }
+
+  .bg-gray-100 {
+    background-color: #f3f4f6 !important;
+  }
+
+  .bg-green-100 {
+    background-color: #dcfce7 !important;
+  }
+
+  .bg-amber-100 {
+    background-color: #fef3c7 !important;
+  }
+
+  .bg-red-100 {
+    background-color: #fee2e2 !important;
+  }
+
+  .text-gray-900 {
+    color: #111827 !important;
+  }
+
+  .text-gray-800 {
+    color: #1f2937 !important;
+  }
+
+  .text-gray-700 {
+    color: #374151 !important;
+  }
+
+  .text-gray-600 {
+    color: #4b5563 !important;
+  }
+
+  .text-gray-500 {
+    color: #6b7280 !important;
+  }
+
+  .text-gray-400 {
+    color: #9ca3af !important;
+  }
+
+  .text-green-700 {
+    color: #15803d !important;
+  }
+
+  .text-green-600 {
+    color: #16a34a !important;
+  }
+
+  .text-amber-600 {
+    color: #d97706 !important;
+  }
+
+  .border-gray-100,
+  .border-gray-200 {
+    border-color: #f3f4f6 !important;
+  }
+}
+
+/* ===== DARK MODE ===== */
+/* ===== DARK MODE ===== */
+html.dark body {
+  background-color: #0f172a !important;
+  color: #e2e8f0;
+}
+
+html.dark nav {
+  background-color: #1e293b !important;
+  border-bottom-color: #334155 !important;
+}
+
+html.dark .card,
+html.dark .kpi-card {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .section-title {
+  color: #93c5fd;
+}
+
+html.dark .nav-link {
+  color: #94a3b8;
+}
+
+html.dark .nav-link:hover {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+html.dark .nav-link.active {
+  background-color: #1B3F6E;
+  color: white;
+}
+
+html.dark .supplier-row:hover {
+  background-color: #1e3a5f;
+}
+
+html.dark .progress-bar,
+html.dark .score-mini-bar {
+  background-color: #334155;
+}
+
+html.dark .badge-green {
+  background-color: #064e3b;
+  color: #6ee7b7;
+}
+
+html.dark .badge-amber {
+  background-color: #78350f;
+  color: #fcd34d;
+}
+
+html.dark .badge-red {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* Tailwind utility overrides */
+html.dark .bg-white {
+  background-color: #1e293b !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #0f172a !important;
+}
+
+html.dark .bg-gray-100 {
+  background-color: #334155 !important;
+}
+
+html.dark .bg-green-100 {
+  background-color: #064e3b !important;
+}
+
+html.dark .bg-amber-100 {
+  background-color: #78350f !important;
+}
+
+html.dark .bg-red-100 {
+  background-color: #7f1d1d !important;
+}
+
+html.dark .border-gray-100,
+html.dark .border-gray-200 {
+  border-color: #334155 !important;
+}
+
+html.dark .divide-gray-100> :not([hidden])~ :not([hidden]) {
+  border-color: #334155 !important;
+}
+
+html.dark .text-gray-900 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-gray-400 {
+  color: #64748b !important;
+}
+
+html.dark input[type="text"],
+html.dark select {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark input::placeholder {
+  color: #64748b;
+}
+
+html.dark .hover\:bg-gray-50:hover {
+  background-color: #1e293b !important;
+}
+
+html.dark .hover\:bg-gray-100:hover {
+  background-color: #334155 !important;
+}
+
+/* Theme toggle button */
+html.dark .theme-btn {
+  color: #94a3b8;
+}
+
+html.dark .theme-btn:hover {
+  background-color: #334155;
+  color: #e2e8f0;
+}

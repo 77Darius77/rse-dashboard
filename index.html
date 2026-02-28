@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,15 +12,26 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function () {
+      const t = localStorage.getItem('rse-theme') || 'system';
+      if (t === 'dark' || (t === 'system' && window.matchMedia('(prefers-color-scheme:dark)').matches))
+        document.documentElement.classList.add('dark');
+    })();
+  </script>
+
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -36,162 +48,7 @@
     }
   </script>
 
-  <style>
-    [x-cloak] { display: none !important; }
-
-    .card {
-      background: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.04);
-      border: 1px solid #f3f4f6;
-      padding: 1.25rem;
-    }
-
-    .badge-green {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.125rem 0.625rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background-color: #dcfce7;
-      color: #166534;
-    }
-
-    .badge-amber {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.125rem 0.625rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background-color: #fef3c7;
-      color: #92400e;
-    }
-
-    .badge-red {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.125rem 0.625rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background-color: #fee2e2;
-      color: #991b1b;
-    }
-
-    .nav-link {
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: all 0.2s;
-      cursor: pointer;
-      color: #4b5563;
-      border: none;
-      background: none;
-    }
-
-    .nav-link:hover {
-      background-color: #f3f4f6;
-      color: #1B3F6E;
-    }
-
-    .nav-link.active {
-      background-color: #1B3F6E;
-      color: white;
-    }
-
-    .nav-link.active:hover {
-      background-color: #152f52;
-    }
-
-    .progress-bar {
-      height: 6px;
-      border-radius: 9999px;
-      background-color: #e5e7eb;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      border-radius: 9999px;
-      transition: width 0.5s ease;
-    }
-
-    .score-mini-bar {
-      height: 4px;
-      border-radius: 9999px;
-      background-color: #e5e7eb;
-      overflow: hidden;
-      min-width: 60px;
-    }
-
-    .kpi-card {
-      background: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.06);
-      border: 1px solid #f3f4f6;
-      padding: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .supplier-row {
-      cursor: pointer;
-      transition: background-color 0.15s;
-    }
-
-    .supplier-row:hover {
-      background-color: #f0f9ff;
-    }
-
-    .radar-container {
-      position: relative;
-      width: 100%;
-      max-width: 380px;
-      margin: 0 auto;
-    }
-
-    .comparison-radar {
-      position: relative;
-      width: 100%;
-      max-width: 280px;
-      margin: 0 auto;
-    }
-
-    .scroll-area {
-      overflow-y: auto;
-      max-height: calc(100vh - 200px);
-    }
-
-    /* Scrollbar styling */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #a1a1a1; }
-
-    .section-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1B3F6E;
-      margin-bottom: 0.75rem;
-    }
-
-    .fade-in {
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .hide-mobile { display: none !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="public/app.css" />
 </head>
 
 <body class="bg-gray-50 font-sans antialiased" x-data="app()" x-init="init()" x-cloak>
@@ -212,7 +69,8 @@
       </div>
       <h2 class="text-lg font-semibold text-gray-800 mb-2">Erreur de chargement</h2>
       <p class="text-gray-500 text-sm mb-4" x-text="error"></p>
-      <button @click="init()" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90 transition">
+      <button @click="init()"
+        class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90 transition">
         Réessayer
       </button>
     </div>
@@ -228,8 +86,8 @@
 
           <!-- Logo + Title -->
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-              <span class="text-white font-bold text-sm">RSE</span>
+            <div class="bg-primary rounded-lg flex items-center justify-center flex-shrink-0 px-2.5 h-9">
+              <span class="text-white font-bold italic" style="font-size:16px">LACME</span>
             </div>
             <div class="hidden sm:block">
               <span class="font-semibold text-gray-800 text-sm">Dashboard RSE Fournisseurs</span>
@@ -238,32 +96,34 @@
 
           <!-- Navigation -->
           <div class="flex items-center gap-1">
-            <button @click="view='direction'; $nextTick(() => initCharts())"
-              :class="view==='direction' ? 'active' : ''"
+            <button @click="view='direction'; $nextTick(() => initCharts())" :class="view==='direction' ? 'active' : ''"
               class="nav-link">
               Direction
             </button>
-            <button @click="view='classement'"
-              :class="view==='classement' ? 'active' : ''"
-              class="nav-link">
+            <button @click="view='classement'" :class="view==='classement' ? 'active' : ''" class="nav-link">
               Classement
             </button>
             <button @click="view='analyse'; $nextTick(() => initAnalyseCharts())"
-              :class="view==='analyse' ? 'active' : ''"
-              class="nav-link">
+              :class="view==='analyse' ? 'active' : ''" class="nav-link">
               Analyse
             </button>
-            <button @click="view='comparaison'"
-              :class="view==='comparaison' ? 'active' : ''"
-              class="nav-link">
+            <button @click="view='comparaison'" :class="view==='comparaison' ? 'active' : ''" class="nav-link">
               Comparaison
             </button>
           </div>
 
-          <!-- Last updated -->
-          <div class="hidden md:flex items-center gap-2 text-xs text-gray-500">
-            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
-            <span>Mis à jour : <span x-text="lastUpdated"></span></span>
+          <!-- Last updated + theme toggle -->
+          <div class="hidden md:flex items-center gap-3">
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+              <span>Mis à jour : <span x-text="lastUpdated"></span></span>
+            </div>
+            <button @click="cycleTheme(); $nextTick(() => lucide.createIcons())" :title="themeLabel()"
+              class="theme-btn p-1.5 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <i x-show="colorTheme === 'light'" data-lucide="sun" class="w-4 h-4"></i>
+              <i x-show="colorTheme === 'dark'" data-lucide="moon" class="w-4 h-4"></i>
+              <i x-show="colorTheme === 'system'" data-lucide="monitor" class="w-4 h-4"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -296,9 +156,11 @@
                 <i data-lucide="trending-up" class="w-4 h-4 text-accent"></i>
               </div>
             </div>
-            <div class="text-3xl font-bold text-gray-900" x-text="data.collective ? data.collective.avg_score.toFixed(1) + '%' : '—'"></div>
+            <div class="text-3xl font-bold text-gray-900"
+              x-text="data.collective ? data.collective.avg_score.toFixed(1) + '%' : '—'"></div>
             <div class="progress-bar">
-              <div class="progress-fill bg-accent" :style="'width:' + (data.collective ? data.collective.avg_score : 0) + '%'"></div>
+              <div class="progress-fill bg-accent"
+                :style="'width:' + (data.collective ? data.collective.avg_score : 0) + '%'"></div>
             </div>
           </div>
 
@@ -311,7 +173,8 @@
               </div>
             </div>
             <div class="text-3xl font-bold text-gray-900" x-text="data.meta ? data.meta.total_responded : '—'"></div>
-            <div class="text-xs text-gray-500" x-text="data.meta ? data.meta.count_fr + ' FR · ' + data.meta.count_en + ' EN' : ''"></div>
+            <div class="text-xs text-gray-500"
+              x-text="data.meta ? data.meta.count_fr + ' FR · ' + data.meta.count_en + ' EN' : ''"></div>
           </div>
 
           <!-- Bons élèves -->
@@ -322,7 +185,8 @@
                 <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
               </div>
             </div>
-            <div class="text-3xl font-bold text-green-600" x-text="data.collective ? data.collective.count_green : '—'"></div>
+            <div class="text-3xl font-bold text-green-600" x-text="data.collective ? data.collective.count_green : '—'">
+            </div>
             <div class="badge-green text-xs" style="font-size:0.7rem;">Score ≥ 70%</div>
           </div>
 
@@ -334,7 +198,8 @@
                 <i data-lucide="arrow-up-circle" class="w-4 h-4 text-amber-600"></i>
               </div>
             </div>
-            <div class="text-3xl font-bold text-amber-600" x-text="data.collective ? data.collective.count_amber : '—'"></div>
+            <div class="text-3xl font-bold text-amber-600" x-text="data.collective ? data.collective.count_amber : '—'">
+            </div>
             <div class="badge-amber text-xs" style="font-size:0.7rem;">Score 50–70%</div>
           </div>
 
@@ -346,7 +211,8 @@
                 <i data-lucide="alert-triangle" class="w-4 h-4 text-danger"></i>
               </div>
             </div>
-            <div class="text-3xl font-bold text-danger" x-text="data.collective ? data.collective.count_red : '—'"></div>
+            <div class="text-3xl font-bold text-danger" x-text="data.collective ? data.collective.count_red : '—'">
+            </div>
             <div class="badge-red text-xs" style="font-size:0.7rem;">Score &lt; 50%</div>
           </div>
         </div>
@@ -403,7 +269,9 @@
               Top 5 performeurs
             </h2>
             <div class="space-y-2">
-              <template x-for="(s, idx) in data.suppliers ? [...data.suppliers].sort((a,b)=>b.score_global - a.score_global).slice(0,5) : []" :key="s.id">
+              <template
+                x-for="(s, idx) in data.suppliers ? [...data.suppliers].sort((a,b)=>b.score_global - a.score_global).slice(0,5) : []"
+                :key="s.id">
                 <div @click="openSupplier(s)"
                   class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors group">
                   <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
@@ -416,8 +284,10 @@
                       <div class="progress-fill bg-green-500" :style="'width:'+s.score_global+'%'"></div>
                     </div>
                   </div>
-                  <div class="text-sm font-bold text-green-600 flex-shrink-0" x-text="s.score_global.toFixed(1)+'%'"></div>
-                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-300 group-hover:text-primary flex-shrink-0"></i>
+                  <div class="text-sm font-bold text-green-600 flex-shrink-0" x-text="s.score_global.toFixed(1)+'%'">
+                  </div>
+                  <i data-lucide="chevron-right"
+                    class="w-4 h-4 text-gray-300 group-hover:text-primary flex-shrink-0"></i>
                 </div>
               </template>
             </div>
@@ -522,12 +392,17 @@
                 <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Éthique</th>
                 <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Env.</th>
                 <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Achats</th>
-                <th class="text-left px-3 py-3 font-semibold text-gray-600">Niveau</th>
+                <th class="text-left px-3 py-3 font-semibold text-gray-600">
+                  <button @click="sortBy('level')" class="flex items-center gap-1 hover:text-primary">
+                    Niveau
+                    <i data-lucide="chevrons-up-down" class="w-3 h-3"></i>
+                  </button>
+                </th>
               </tr>
             </thead>
             <tbody>
               <template x-for="s in filteredSuppliers()" :key="s.id">
-                <tr class="supplier-row border-b border-gray-50 last:border-0" @click="$dispatch('open-supplier', s)">
+                <tr class="supplier-row border-b border-gray-50 last:border-0" @click="$dispatch('open-supplier', { supplier: s, list: filteredSuppliers() })">
                   <td class="px-4 py-3">
                     <div class="font-medium text-gray-800 truncate max-w-[200px]" x-text="s.name"></div>
                     <div class="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
@@ -547,7 +422,8 @@
                     </div>
                   </td>
                   <!-- Scores piliers -->
-                  <template x-for="pillar in ['gouvernance','droits_humains','sst','ethique','environnement','achats']" :key="pillar">
+                  <template x-for="pillar in ['gouvernance','droits_humains','sst','ethique','environnement','achats']"
+                    :key="pillar">
                     <td class="px-3 py-3 hide-mobile">
                       <div class="text-xs font-medium"
                         :class="s.scores[pillar] >= 70 ? 'text-green-600' : s.scores[pillar] >= 50 ? 'text-amber-600' : 'text-danger'"
@@ -575,7 +451,8 @@
         </div>
 
         <!-- Event listener for opening supplier from table row -->
-        <span x-init="$el.closest('[x-data]').$el.addEventListener('open-supplier', e => { const appEl = document.querySelector('[x-data]'); if(appEl && appEl._x_dataStack) { const appData = Alpine.$data(appEl); if(appData) appData.openSupplier(e.detail); } })"></span>
+        <span
+          x-init="$el.closest('[x-data]').$el.addEventListener('open-supplier', e => { const appEl = document.querySelector('[x-data]'); if(appEl && appEl._x_dataStack) { const appData = Alpine.$data(appEl); if(appData) appData.openSupplier(e.detail.supplier || e.detail, e.detail.list); } })"></span>
 
       </div><!-- /classement -->
 
@@ -583,9 +460,34 @@
       <!-- ==================== VUE ANALYSE ==================== -->
       <div x-show="view==='analyse'" class="fade-in space-y-6">
 
-        <div>
-          <h1 class="text-xl font-bold text-gray-900">Analyse Globale</h1>
-          <p class="text-sm text-gray-500 mt-0.5">Répartitions et performances par pilier</p>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 class="text-xl font-bold text-gray-900">Analyse Globale</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Répartitions et performances par pilier</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <select x-model="analyseFilterLevel" @change="initAnalyseCharts()"
+              class="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent bg-white">
+              <option value="">Tous les niveaux</option>
+              <option value="green">🟢 Bon élève</option>
+              <option value="amber">🟡 En progression</option>
+              <option value="red">🔴 Prioritaire</option>
+            </select>
+            <select x-model="analyseFilterLang" @change="initAnalyseCharts()"
+              class="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent bg-white">
+              <option value="">Toutes les langues</option>
+              <option value="fr">🇫🇷 Français</option>
+              <option value="en">🇬🇧 Anglais</option>
+            </select>
+            <span x-show="analyseFilterLevel || analyseFilterLang"
+              class="text-xs text-gray-400"
+              x-text="analyseSuppliers().length + ' fournisseur(s)'"></span>
+            <button x-show="analyseFilterLevel || analyseFilterLang"
+              @click="analyseFilterLevel=''; analyseFilterLang=''; initAnalyseCharts()"
+              class="text-xs text-accent hover:underline">
+              Réinitialiser
+            </button>
+          </div>
         </div>
 
         <!-- Donuts -->
@@ -595,18 +497,21 @@
             <div style="position:relative; max-width:240px; margin:0 auto;">
               <canvas id="donutLevels" height="200"></canvas>
             </div>
-            <div class="flex justify-center gap-4 mt-4 text-sm" x-show="data.collective">
+            <div class="flex justify-center gap-4 mt-4 text-sm" x-show="analyseStats()">
               <div class="flex items-center gap-1.5">
                 <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                <span class="text-gray-600">Vert (<span x-text="data.collective ? data.collective.count_green : 0"></span>)</span>
+                <span class="text-gray-600">Vert (<span
+                    x-text="analyseStats()?.count_green ?? 0"></span>)</span>
               </div>
               <div class="flex items-center gap-1.5">
                 <div class="w-3 h-3 rounded-full bg-amber-400"></div>
-                <span class="text-gray-600">Amber (<span x-text="data.collective ? data.collective.count_amber : 0"></span>)</span>
+                <span class="text-gray-600">Amber (<span
+                    x-text="analyseStats()?.count_amber ?? 0"></span>)</span>
               </div>
               <div class="flex items-center gap-1.5">
                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <span class="text-gray-600">Rouge (<span x-text="data.collective ? data.collective.count_red : 0"></span>)</span>
+                <span class="text-gray-600">Rouge (<span
+                    x-text="analyseStats()?.count_red ?? 0"></span>)</span>
               </div>
             </div>
           </div>
@@ -615,14 +520,14 @@
             <div style="position:relative; max-width:240px; margin:0 auto;">
               <canvas id="donutLangs" height="200"></canvas>
             </div>
-            <div class="flex justify-center gap-4 mt-4 text-sm" x-show="data.meta">
+            <div class="flex justify-center gap-4 mt-4 text-sm" x-show="analyseStats()">
               <div class="flex items-center gap-1.5">
                 <span>🇫🇷</span>
-                <span class="text-gray-600">Français (<span x-text="data.meta ? data.meta.count_fr : 0"></span>)</span>
+                <span class="text-gray-600">Français (<span x-text="analyseStats()?.count_fr ?? 0"></span>)</span>
               </div>
               <div class="flex items-center gap-1.5">
                 <span>🇬🇧</span>
-                <span class="text-gray-600">Anglais (<span x-text="data.meta ? data.meta.count_en : 0"></span>)</span>
+                <span class="text-gray-600">Anglais (<span x-text="analyseStats()?.count_en ?? 0"></span>)</span>
               </div>
             </div>
           </div>
@@ -631,8 +536,9 @@
         <!-- Tableau piliers détaillé -->
         <div class="card">
           <h2 class="section-title">Détail par pilier</h2>
-          <div class="space-y-3" x-show="data.collective">
-            <template x-for="[pillar, score] in Object.entries(data.collective ? data.collective.by_pillar : {})" :key="pillar">
+          <div class="space-y-3" x-show="analyseStats()">
+            <template x-for="[pillar, score] in Object.entries(analyseStats()?.by_pillar ?? {})"
+              :key="pillar">
               <div class="flex items-center gap-4">
                 <div class="w-28 text-sm font-medium text-gray-600 flex-shrink-0" x-text="getPillarLabel(pillar)"></div>
                 <div class="flex-1 progress-bar" style="height:10px;">
@@ -684,11 +590,8 @@
             <template x-for="s in getAllSuppliers()" :key="s.id">
               <label class="flex items-center gap-3 p-2.5 rounded-lg border cursor-pointer transition-all"
                 :class="isSelected(s.id) ? 'border-accent bg-accent/5' : 'border-gray-200 hover:border-gray-300'">
-                <input type="checkbox"
-                  :checked="isSelected(s.id)"
-                  @change="toggleSelect(s)"
-                  :disabled="!isSelected(s.id) && selected.length >= 4"
-                  class="accent-accent w-4 h-4 flex-shrink-0" />
+                <input type="checkbox" :checked="isSelected(s.id)" @change="toggleSelect(s)"
+                  :disabled="!isSelected(s.id) && selected.length >= 4" class="accent-accent w-4 h-4 flex-shrink-0" />
                 <div class="flex-1 min-w-0">
                   <p class="text-sm font-medium text-gray-800 truncate" x-text="s.name"></p>
                   <div class="flex items-center gap-2 mt-0.5">
@@ -696,7 +599,8 @@
                       :class="s.score_global >= 70 ? 'text-green-600' : s.score_global >= 50 ? 'text-amber-600' : 'text-danger'"
                       x-text="s.score_global.toFixed(1)+'%'">
                     </span>
-                    <span :class="getLevelClass(s.level)" style="font-size:0.65rem; padding:0 0.4rem;" x-text="getLevelLabel(s.level)"></span>
+                    <span :class="getLevelClass(s.level)" style="font-size:0.65rem; padding:0 0.4rem;"
+                      x-text="getLevelLabel(s.level)"></span>
                   </div>
                 </div>
               </label>
@@ -745,7 +649,7 @@
                   <span :class="getLevelClass(s.level)" x-text="getLevelLabel(s.level)"></span>
                 </div>
                 <div class="comparison-radar">
-                  <canvas :id="'comp-radar-'+s.id" height="220"></canvas>
+                  <canvas :id="'comp-radar-'+s.id" height="290"></canvas>
                 </div>
                 <!-- Pillar scores -->
                 <div class="mt-3 space-y-1.5">
@@ -769,8 +673,9 @@
             </template>
           </div>
 
-          <!-- Draw comparison radars when selection changes -->
+          <!-- Draw comparison radars when selection or theme changes -->
           <span x-effect="drawComparisonRadars()"></span>
+          <span x-on:rse-theme-changed.window="drawComparisonRadars()"></span>
         </div>
 
       </div><!-- /comparaison -->
@@ -779,14 +684,31 @@
       <!-- ==================== VUE FICHE FOURNISSEUR ==================== -->
       <div x-show="view==='fournisseur'" class="fade-in" x-show="selectedSupplier">
         <template x-if="selectedSupplier">
-          <div class="space-y-6">
+          <div class="space-y-6 print-fiche">
 
-            <!-- Back button + Header -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-4">
+            <!-- Back button + Navigation + Export -->
+            <div class="flex items-center justify-between no-print">
               <button @click="view='classement'"
-                class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors self-start">
+                class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors">
                 <i data-lucide="arrow-left" class="w-4 h-4"></i>
                 Retour au classement
+              </button>
+              <div class="flex items-center gap-2">
+                <button @click="prevSupplier()" :disabled="!hasPrevSupplier()"
+                  class="flex items-center gap-1.5 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                  <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                  Précédent
+                </button>
+                <button @click="nextSupplier()" :disabled="!hasNextSupplier()"
+                  class="flex items-center gap-1.5 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                  Suivant
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <button @click="printFiche()"
+                class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90 transition">
+                <i data-lucide="printer" class="w-4 h-4"></i>
+                Exporter PDF
               </button>
             </div>
 
@@ -796,8 +718,10 @@
                 <div class="flex-1 min-w-0">
                   <div class="flex items-center gap-3 flex-wrap">
                     <h1 class="text-xl font-bold text-gray-900" x-text="selectedSupplier.name"></h1>
-                    <span :class="getLevelClass(selectedSupplier.level)" x-text="getLevelLabel(selectedSupplier.level)"></span>
-                    <span class="text-xs text-gray-400" x-text="selectedSupplier.language === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'"></span>
+                    <span :class="getLevelClass(selectedSupplier.level)"
+                      x-text="getLevelLabel(selectedSupplier.level)"></span>
+                    <span class="text-xs text-gray-400"
+                      x-text="selectedSupplier.language === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'"></span>
                   </div>
 
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 mt-3 text-sm text-gray-600">
@@ -809,9 +733,18 @@
                       <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gray-400 flex-shrink-0"></i>
                       <span class="truncate" x-text="selectedSupplier.address"></span>
                     </div>
-                    <div class="flex items-center gap-2">
-                      <i data-lucide="user" class="w-3.5 h-3.5 text-gray-400 flex-shrink-0"></i>
-                      <span x-text="selectedSupplier.contact_name + ' · ' + selectedSupplier.contact_role"></span>
+                    <div class="flex flex-col gap-0.5">
+                      <div class="flex items-center gap-2">
+                        <i data-lucide="user" class="w-3.5 h-3.5 text-gray-400 flex-shrink-0"></i>
+                        <span x-text="selectedSupplier.contact_name + ' · ' + selectedSupplier.contact_role"></span>
+                      </div>
+                      <template x-if="extractEmail(selectedSupplier.contact_email)">
+                        <div class="flex items-center gap-2 pl-5">
+                          <a :href="'mailto:' + extractEmail(selectedSupplier.contact_email)"
+                            class="text-accent hover:underline truncate text-sm"
+                            x-text="extractEmail(selectedSupplier.contact_email)"></a>
+                        </div>
+                      </template>
                     </div>
                     <div class="flex items-center gap-2">
                       <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gray-400 flex-shrink-0"></i>
@@ -821,12 +754,6 @@
                       <i data-lucide="calendar" class="w-3.5 h-3.5 text-gray-400 flex-shrink-0"></i>
                       <span>Répondu le <span x-text="selectedSupplier.responded_at"></span></span>
                     </div>
-                    <template x-if="selectedSupplier.contact_email">
-                      <div class="flex items-center gap-2">
-                        <i data-lucide="mail" class="w-3.5 h-3.5 text-gray-400 flex-shrink-0"></i>
-                        <span class="truncate" x-text="selectedSupplier.contact_email"></span>
-                      </div>
-                    </template>
                   </div>
                 </div>
 
@@ -847,7 +774,7 @@
             </div>
 
             <!-- Radar + Scores par pilier -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 profil-rse-grid">
 
               <!-- Radar individuel -->
               <div class="card">
@@ -855,8 +782,8 @@
                   <i data-lucide="radar" class="w-4 h-4 text-accent"></i>
                   Profil RSE
                 </h2>
-                <div class="radar-container">
-                  <canvas :id="'radar-'+selectedSupplier.id" height="280"></canvas>
+                <div class="radar-container" style="max-width:500px">
+                  <canvas :id="'radar-'+selectedSupplier.id" height="364"></canvas>
                 </div>
               </div>
 
@@ -940,7 +867,8 @@
                   <ol class="space-y-3">
                     <template x-for="(rec, idx) in selectedSupplier.recommendations" :key="idx">
                       <li class="flex gap-3">
-                        <span class="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5"
+                        <span
+                          class="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5"
                           x-text="idx+1">
                         </span>
                         <p class="text-sm text-gray-700 leading-relaxed" x-text="rec"></p>
@@ -958,12 +886,17 @@
 
             </div>
 
-            <!-- Bouton retour -->
-            <div class="flex justify-center pb-4">
+            <!-- Boutons bas de page -->
+            <div class="flex justify-center gap-3 pb-4 no-print">
               <button @click="view='classement'"
                 class="flex items-center gap-2 px-6 py-2.5 border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
                 <i data-lucide="arrow-left" class="w-4 h-4"></i>
                 Retour au classement
+              </button>
+              <button @click="printFiche()"
+                class="flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90 transition">
+                <i data-lucide="printer" class="w-4 h-4"></i>
+                Exporter PDF
               </button>
             </div>
 
@@ -974,557 +907,7 @@
     </main>
   </div><!-- /main app -->
 
-  <script>
-    // =====================================================================
-    // PILLAR LABELS
-    // =====================================================================
-    const PILLAR_LABELS = {
-      gouvernance: 'Gouvernance',
-      droits_humains: 'Droits humains',
-      sst: 'Santé & Sécurité',
-      ethique: 'Éthique',
-      environnement: 'Environnement',
-      achats: 'Achats responsables'
-    };
-
-    // Chart color palette for pillars
-    const PILLAR_COLORS = [
-      '#1B3F6E', '#00A896', '#F4A261', '#E63946', '#6366f1', '#10b981'
-    ];
-
-    // =====================================================================
-    // CHART HELPERS
-    // =====================================================================
-    function destroyChart(id) {
-      const existing = Chart.getChart(id);
-      if (existing) existing.destroy();
-    }
-
-    function radarDefaults(labels, values, label, color) {
-      return {
-        type: 'radar',
-        data: {
-          labels,
-          datasets: [{
-            label,
-            data: values,
-            backgroundColor: color + '20',
-            borderColor: color,
-            borderWidth: 2,
-            pointBackgroundColor: color,
-            pointBorderColor: '#fff',
-            pointBorderWidth: 2,
-            pointRadius: 4
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          plugins: { legend: { display: false } },
-          scales: {
-            r: {
-              min: 0,
-              max: 100,
-              ticks: { stepSize: 25, font: { size: 9 }, color: '#9ca3af', backdropColor: 'transparent' },
-              grid: { color: '#e5e7eb' },
-              angleLines: { color: '#e5e7eb' },
-              pointLabels: { font: { size: 10 }, color: '#4b5563' }
-            }
-          }
-        }
-      };
-    }
-
-    // =====================================================================
-    // MAIN APP
-    // =====================================================================
-    Chart.register(ChartDataLabels);
-    Chart.defaults.plugins.datalabels.display = false;
-
-    function app() {
-      return {
-        view: 'direction',
-        data: {},
-        selectedSupplier: null,
-        loading: true,
-        error: null,
-        lastUpdated: '',
-
-        async init() {
-          try {
-            this.loading = true;
-            this.error = null;
-            const res = await fetch('public/data.json?t=' + new Date().getTime());
-            if (!res.ok) throw new Error('Impossible de charger les données (HTTP ' + res.status + ')');
-            this.data = await res.json();
-
-            // Format last updated
-            if (this.data.meta && this.data.meta.last_updated) {
-              const d = new Date(this.data.meta.last_updated);
-              this.lastUpdated = d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' });
-            }
-
-            this.loading = false;
-
-            // Initialize icons + charts
-            await this.$nextTick();
-            lucide.createIcons();
-            this.initCharts();
-
-          } catch (e) {
-            this.error = e.message;
-            this.loading = false;
-          }
-        },
-
-        openSupplier(s) {
-          this.selectedSupplier = s;
-          this.view = 'fournisseur';
-          this.$nextTick(() => {
-            lucide.createIcons();
-            this.drawSupplierRadar(s);
-          });
-        },
-
-        getLevelClass(level) {
-          if (level === 'green') return 'badge-green';
-          if (level === 'amber') return 'badge-amber';
-          return 'badge-red';
-        },
-
-        getLevelLabel(level) {
-          if (level === 'green') return '🟢 Bon élève';
-          if (level === 'amber') return '🟡 En progression';
-          return '🔴 Prioritaire';
-        },
-
-        getPillarLabel(key) {
-          return PILLAR_LABELS[key] || key;
-        },
-
-        getScoreColor(score) {
-          if (score >= 70) return 'bg-green-500';
-          if (score >= 50) return 'bg-amber-400';
-          return 'bg-red-500';
-        },
-
-        topPillars() {
-          if (!this.data.collective) return [];
-          return Object.entries(this.data.collective.by_pillar)
-            .sort((a, b) => b[1] - a[1])
-            .slice(0, 3)
-            .map(([key, val]) => ({ key, val }));
-        },
-
-        weakPillars() {
-          if (!this.data.collective) return [];
-          return Object.entries(this.data.collective.by_pillar)
-            .sort((a, b) => a[1] - b[1])
-            .slice(0, 3)
-            .map(([key, val]) => ({ key, val }));
-        },
-
-        prioritySuppliers() {
-          if (!this.data.suppliers) return [];
-          return this.data.suppliers
-            .filter(s => s.level === 'red')
-            .sort((a, b) => a.score_global - b.score_global)
-            .slice(0, 5);
-        },
-
-        // ----------------------------------------------------------------
-        // CHARTS
-        // ----------------------------------------------------------------
-        initCharts() {
-          if (!this.data.collective) return;
-          this.$nextTick(() => {
-            this.drawCollectiveRadar();
-          });
-        },
-
-        initAnalyseCharts() {
-          if (!this.data.collective) return;
-          this.$nextTick(() => {
-            this.drawDonutLevels();
-            this.drawDonutLangs();
-            this.drawBubblePillars();
-          });
-        },
-
-        drawCollectiveRadar() {
-          destroyChart('radarCollectif');
-          const canvas = document.getElementById('radarCollectif');
-          if (!canvas) return;
-          const pillars = Object.keys(this.data.collective.by_pillar);
-          const labels = pillars.map(p => PILLAR_LABELS[p] || p);
-          const values = pillars.map(p => this.data.collective.by_pillar[p]);
-          new Chart(canvas, radarDefaults(labels, values, 'Score collectif', '#00A896'));
-        },
-
-        drawSupplierRadar(s) {
-          const canvasId = 'radar-' + s.id;
-          destroyChart(canvasId);
-          const canvas = document.getElementById(canvasId);
-          if (!canvas) return;
-          const pillars = Object.keys(s.scores);
-          const labels = pillars.map(p => PILLAR_LABELS[p] || p);
-          const values = pillars.map(p => s.scores[p]);
-          const color = s.level === 'green' ? '#22c55e' : s.level === 'amber' ? '#f59e0b' : '#E63946';
-          new Chart(canvas, radarDefaults(labels, values, s.name, color));
-        },
-
-        drawDonutLevels() {
-          destroyChart('donutLevels');
-          const canvas = document.getElementById('donutLevels');
-          if (!canvas) return;
-          new Chart(canvas, {
-            type: 'doughnut',
-            data: {
-              labels: ['Bon élève', 'En progression', 'Prioritaire'],
-              datasets: [{
-                data: [
-                  this.data.collective.count_green,
-                  this.data.collective.count_amber,
-                  this.data.collective.count_red
-                ],
-                backgroundColor: ['#22c55e', '#f59e0b', '#E63946'],
-                borderWidth: 2,
-                borderColor: '#fff'
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: true,
-              cutout: '65%',
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  callbacks: {
-                    label: ctx => ' ' + ctx.label + ' : ' + ctx.raw + ' fournisseurs'
-                  }
-                }
-              }
-            }
-          });
-        },
-
-        drawDonutLangs() {
-          destroyChart('donutLangs');
-          const canvas = document.getElementById('donutLangs');
-          if (!canvas) return;
-          new Chart(canvas, {
-            type: 'doughnut',
-            data: {
-              labels: ['Français', 'Anglais'],
-              datasets: [{
-                data: [this.data.meta.count_fr, this.data.meta.count_en],
-                backgroundColor: ['#1B3F6E', '#00A896'],
-                borderWidth: 2,
-                borderColor: '#fff'
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: true,
-              cutout: '65%',
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  callbacks: {
-                    label: ctx => ' ' + ctx.label + ' : ' + ctx.raw + ' fournisseurs'
-                  }
-                }
-              }
-            }
-          });
-        },
-
-        drawBubblePillars() {
-          destroyChart('bubblePillars');
-          const canvas = document.getElementById('bubblePillars');
-          if (!canvas) return;
-
-          const WEIGHTS = {
-            gouvernance: 20,
-            droits_humains: 15,
-            sst: 20,
-            ethique: 15,
-            environnement: 20,
-            achats: 10
-          };
-
-          const suppliers = this.data.suppliers || [];
-          const pillars = Object.keys(this.data.collective.by_pillar);
-
-          const datasets = pillars.map(pillar => {
-            const score = this.data.collective.by_pillar[pillar];
-            const weight = WEIGHTS[pillar] || 10;
-            const redCount = suppliers.filter(s => s.scores && s.scores[pillar] < 50).length;
-            const color = score >= 70 ? '#22c55e' : score >= 50 ? '#f59e0b' : '#E63946';
-            return {
-              label: PILLAR_LABELS[pillar] || pillar,
-              data: [{ x: score, y: weight, r: Math.max(12, redCount * 4) }],
-              backgroundColor: color + 'bb',
-              borderColor: color,
-              borderWidth: 2,
-              redCount
-            };
-          });
-
-          new Chart(canvas, {
-            type: 'bubble',
-            data: { datasets },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              layout: {
-                padding: { top: 20 }
-              },
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  callbacks: {
-                    label: ctx => {
-                      const ds = datasets[ctx.datasetIndex];
-                      return [
-                        ds.label,
-                        'Score moyen : ' + ctx.raw.x.toFixed(1) + '%',
-                        'Importance : ' + ctx.raw.y + '%',
-                        'Fournisseurs en rouge : ' + ds.redCount
-                      ];
-                    }
-                  }
-                },
-                datalabels: {
-                  display: true,
-                  color: '#374151',
-                  font: { size: 11, weight: '600' },
-                  formatter: (val, ctx) => datasets[ctx.datasetIndex].label,
-                  anchor: 'end',
-                  align: 'top',
-                  offset: 4
-                }
-              },
-              scales: {
-                x: {
-                  min: 0,
-                  max: 100,
-                  title: { display: true, text: 'Score moyen (%)', font: { size: 11 }, color: '#6b7280' },
-                  ticks: { callback: v => v + '%', font: { size: 11 } },
-                  grid: { color: '#f3f4f6' }
-                },
-                y: {
-                  min: 5,
-                  max: 27,
-                  title: { display: true, text: 'Importance (%)', font: { size: 11 }, color: '#6b7280' },
-                  ticks: { callback: v => v + '%', font: { size: 11 }, stepSize: 5 },
-                  grid: { color: '#f3f4f6' }
-                }
-              }
-            }
-          });
-        }
-      };
-    }
-
-    // =====================================================================
-    // CLASSEMENT VIEW COMPONENT
-    // =====================================================================
-    function classementView() {
-      return {
-        search: '',
-        filterLevel: '',
-        filterLang: '',
-        sortKey: 'score_global',
-        sortDir: 'desc',
-
-        getAppData() {
-          // Get the parent Alpine app data
-          const appEl = document.querySelector('[x-data="app()"]') ||
-                        document.querySelector('body[x-data]');
-          if (appEl) return Alpine.$data(appEl);
-          return null;
-        },
-
-        getLevelClass(level) {
-          if (level === 'green') return 'badge-green';
-          if (level === 'amber') return 'badge-amber';
-          return 'badge-red';
-        },
-
-        getLevelLabel(level) {
-          if (level === 'green') return '🟢 Bon élève';
-          if (level === 'amber') return '🟡 En progression';
-          return '🔴 Prioritaire';
-        },
-
-        filteredSuppliers() {
-          const appData = this.getAppData();
-          if (!appData || !appData.data || !appData.data.suppliers) return [];
-
-          let list = [...appData.data.suppliers];
-
-          if (this.search.trim()) {
-            const q = this.search.toLowerCase().trim();
-            list = list.filter(s =>
-              s.name.toLowerCase().includes(q) ||
-              (s.contact_name && s.contact_name.toLowerCase().includes(q))
-            );
-          }
-          if (this.filterLevel) list = list.filter(s => s.level === this.filterLevel);
-          if (this.filterLang) list = list.filter(s => s.language === this.filterLang);
-
-          list.sort((a, b) => {
-            let va, vb;
-            if (this.sortKey === 'name') {
-              va = a.name; vb = b.name;
-              return this.sortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
-            } else {
-              va = a[this.sortKey] || 0;
-              vb = b[this.sortKey] || 0;
-              return this.sortDir === 'asc' ? va - vb : vb - va;
-            }
-          });
-
-          return list;
-        },
-
-        sortBy(key) {
-          if (this.sortKey === key) {
-            this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc';
-          } else {
-            this.sortKey = key;
-            this.sortDir = key === 'name' ? 'asc' : 'desc';
-          }
-        },
-
-        exportCSV() {
-          const suppliers = this.filteredSuppliers();
-          if (suppliers.length === 0) return;
-
-          const headers = ['Nom', 'SIRET', 'Score Global', 'Gouvernance', 'Droits Humains', 'SST', 'Ethique', 'Environnement', 'Achats', 'Niveau', 'Langue', 'Date réponse'];
-          const rows = suppliers.map(s => [
-            '"' + s.name + '"',
-            s.siret,
-            s.score_global.toFixed(1),
-            s.scores.gouvernance.toFixed(1),
-            s.scores.droits_humains.toFixed(1),
-            s.scores.sst.toFixed(1),
-            s.scores.ethique.toFixed(1),
-            s.scores.environnement.toFixed(1),
-            s.scores.achats.toFixed(1),
-            s.level,
-            s.language,
-            '"' + (s.responded_at || '') + '"'
-          ]);
-
-          const csv = [headers.join(';'), ...rows.map(r => r.join(';'))].join('\n');
-          const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'rse_fournisseurs_' + new Date().toISOString().slice(0, 10) + '.csv';
-          a.click();
-          URL.revokeObjectURL(url);
-        }
-      };
-    }
-
-    // =====================================================================
-    // COMPARAISON VIEW COMPONENT
-    // =====================================================================
-    function comparaisonView() {
-      return {
-        selected: [],
-        _radarCharts: {},
-
-        getAppData() {
-          const appEl = document.querySelector('body[x-data]');
-          if (appEl) return Alpine.$data(appEl);
-          return null;
-        },
-
-        getLevelClass(level) {
-          if (level === 'green') return 'badge-green';
-          if (level === 'amber') return 'badge-amber';
-          return 'badge-red';
-        },
-
-        getLevelLabel(level) {
-          if (level === 'green') return '🟢 Bon élève';
-          if (level === 'amber') return '🟡 En progression';
-          return '🔴 Prioritaire';
-        },
-
-        getPillarLabel(key) {
-          return PILLAR_LABELS[key] || key;
-        },
-
-        getAllSuppliers() {
-          const appData = this.getAppData();
-          if (!appData || !appData.data || !appData.data.suppliers) return [];
-          return [...appData.data.suppliers].sort((a, b) => b.score_global - a.score_global);
-        },
-
-        isSelected(id) {
-          return this.selected.some(s => s.id === id);
-        },
-
-        toggleSelect(supplier) {
-          if (this.isSelected(supplier.id)) {
-            this.selected = this.selected.filter(s => s.id !== supplier.id);
-            // Destroy radar for removed supplier
-            const chartId = 'comp-radar-' + supplier.id;
-            destroyChart(chartId);
-            delete this._radarCharts[supplier.id];
-          } else if (this.selected.length < 4) {
-            this.selected = [...this.selected, supplier];
-          }
-        },
-
-        drawComparisonRadars() {
-          if (this.selected.length < 2) return;
-
-          this.$nextTick(() => {
-            this.selected.forEach(s => {
-              const canvasId = 'comp-radar-' + s.id;
-              destroyChart(canvasId);
-              const canvas = document.getElementById(canvasId);
-              if (!canvas) return;
-
-              const pillars = Object.keys(s.scores);
-              const labels = pillars.map(p => PILLAR_LABELS[p] || p);
-              const values = pillars.map(p => s.scores[p]);
-              const color = s.level === 'green' ? '#22c55e' : s.level === 'amber' ? '#f59e0b' : '#E63946';
-
-              const cfg = radarDefaults(labels, values, s.name, color);
-              // Make labels smaller for comparison view
-              cfg.options.scales.r.pointLabels.font = { size: 8 };
-              cfg.options.scales.r.ticks.font = { size: 8 };
-              new Chart(canvas, cfg);
-            });
-          });
-        }
-      };
-    }
-
-    // =====================================================================
-    // POST-RENDER: Reinitialize Lucide icons whenever Alpine updates DOM
-    // =====================================================================
-    document.addEventListener('alpine:initialized', () => {
-      lucide.createIcons();
-    });
-
-    // Classement open-supplier event bridge
-    document.addEventListener('open-supplier', (e) => {
-      const bodyEl = document.querySelector('body');
-      if (bodyEl) {
-        const appData = Alpine.$data(bodyEl);
-        if (appData && typeof appData.openSupplier === 'function') {
-          appData.openSupplier(e.detail);
-        }
-      }
-    });
-  </script>
+  <script src="public/app.js"></script>
 </body>
+
 </html>
