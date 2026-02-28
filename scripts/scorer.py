@@ -58,10 +58,23 @@ def score_supplier(row: list, language: str = 'fr') -> dict:
     strengths = [p for p, s in pillar_scores.items() if s >= 80]
     weaknesses = [p for p, s in pillar_scores.items() if s < 50]
 
-    recommendations = []
+    # Mapping inverse col → pilier pour le tri par urgence
+    col_to_pillar = {
+        col: pillar
+        for pillar, cols in pillar_cols.items()
+        for col in cols
+    }
+
+    recommendations_with_score = []
     for col_idx, message in reco_map.items():
         if col_idx < len(row) and score_answer(row[col_idx]) < 0.5:
-            recommendations.append(message)
+            pillar = col_to_pillar.get(col_idx)
+            pillar_score = pillar_scores.get(pillar, 100) if pillar else 100
+            recommendations_with_score.append((pillar_score, col_idx, message))
+
+    # Trier par score de pilier ascendant : pilier le plus faible = recommandation la plus urgente
+    recommendations_with_score.sort(key=lambda x: (x[0], x[1]))
+    recommendations = [msg for _, _, msg in recommendations_with_score]
 
     def get_meta(key):
         idx = META_COLUMNS.get(key, -1)
