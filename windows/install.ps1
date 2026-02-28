@@ -128,6 +128,8 @@ if (Test-Path $destSecret) {
             Write-Warn "Ignoré. Vous devrez fournir ce fichier lors du premier lancement de update.bat."
             break
         }
+        # Supprimer les guillemets éventuels (copier-coller Windows)
+        $srcSecret = $srcSecret.Trim('"').Trim("'")
         if (-not (Test-Path $srcSecret)) {
             Write-Host "  Fichier introuvable : $srcSecret" -ForegroundColor Red
             $srcSecret = ""
@@ -136,10 +138,11 @@ if (Test-Path $destSecret) {
 
     if ($srcSecret -ne "" -and (Test-Path $srcSecret)) {
         try {
-            Copy-Item $srcSecret $destSecret
-            Write-OK "Fichier copié dans Documents\"
+            $lastSecretFile = "$REPO_DIR\scripts\.last_secret_path"
+            Set-Content -Path $lastSecretFile -Value $srcSecret -Encoding UTF8
+            Write-OK "Chemin mémorisé : $srcSecret"
         } catch {
-            Write-Warn "Impossible de copier le fichier : $_"
+            Write-Warn "Impossible de mémoriser le chemin : $_"
         }
     }
 }
