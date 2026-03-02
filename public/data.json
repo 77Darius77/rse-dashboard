@@ -1,22 +1,22 @@
 {
   "meta": {
-    "last_updated": "2026-02-28T22:16:56.830969",
-    "total_responded": 23,
-    "count_fr": 15,
+    "last_updated": "2026-03-02T17:39:24.532271",
+    "total_responded": 24,
+    "count_fr": 16,
     "count_en": 7,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 52.1,
+    "avg_score": 51.9,
     "by_pillar": {
-      "gouvernance": 46.0,
-      "droits_humains": 53.3,
-      "sst": 56.5,
-      "ethique": 38.0,
-      "environnement": 55.6,
-      "achats": 52.2
+      "gouvernance": 47.9,
+      "droits_humains": 54.2,
+      "sst": 58.3,
+      "ethique": 39.6,
+      "environnement": 55.8,
+      "achats": 54.2
     },
-    "count_green": 11,
+    "count_green": 12,
     "count_amber": 4,
     "count_red": 8,
     "top_pillar": "sst",
@@ -35,7 +35,7 @@
       "rse_contact": "",
       "responded_at": "25/02/2026 15:50:48",
       "language": "fr",
-      "score_global": 86.2,
+      "score_global": 86.6,
       "level": "green",
       "scores": {
         "gouvernance": 92.9,
@@ -68,7 +68,7 @@
       "rse_contact": "",
       "responded_at": "27/02/2026 09:22:58",
       "language": "fr",
-      "score_global": 86.2,
+      "score_global": 86.6,
       "level": "green",
       "scores": {
         "gouvernance": 92.9,
@@ -101,7 +101,7 @@
       "rse_contact": "",
       "responded_at": "19/02/2026 09:56:55",
       "language": "fr",
-      "score_global": 84.8,
+      "score_global": 85.5,
       "level": "green",
       "scores": {
         "gouvernance": 92.9,
@@ -123,36 +123,37 @@
       ]
     },
     {
-      "id": "igol-picardie-ile-de-france",
-      "name": "IGOL PICARDIE ILE DE FRANCE",
-      "email": "eric.macleod@igol.com",
-      "siret": "57172129900014",
-      "address": "614 rue de Cagny - 80090 AMIENS",
-      "contact_name": "MACLEOD Eric",
-      "contact_role": "Responsable de Région",
+      "id": "rutronik-sas",
+      "name": "Rutronik SAS",
+      "email": "cyrille.amelineau@rutronik.com",
+      "siret": "318334018",
+      "address": "6, Mail de l'Europe, FR-78170 La Celle St. Cloud",
+      "contact_name": "AMELINEAU Cyrille.",
+      "contact_role": "Global Key Account Manager",
       "contact_email": "",
       "rse_contact": "",
-      "responded_at": "18/02/2026 08:54:54",
+      "responded_at": "02/03/2026 17:36:37",
       "language": "fr",
-      "score_global": 83.4,
+      "score_global": 83.3,
       "level": "green",
       "scores": {
-        "gouvernance": 64.3,
+        "gouvernance": 92.9,
         "droits_humains": 75.0,
         "sst": 100.0,
         "ethique": 75.0,
-        "environnement": 77.8,
+        "environnement": 61.1,
         "achats": 100.0
       },
       "strengths": [
+        "gouvernance",
         "sst",
         "achats"
       ],
       "weaknesses": [],
       "recommendations": [
-        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
-        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mesurer les émissions de CO2 liées au transport des marchandises (bilan carbone transport)"
       ]
     },
     {
@@ -167,7 +168,7 @@
       "rse_contact": "",
       "responded_at": "19/02/2026 14:51:43",
       "language": "fr",
-      "score_global": 82.0,
+      "score_global": 81.6,
       "level": "green",
       "scores": {
         "gouvernance": 78.6,
@@ -189,25 +190,25 @@
       ]
     },
     {
-      "id": "adp-85",
-      "name": "ADP 85",
-      "email": "t.bleteau@adp85.com",
-      "siret": "39889946800027",
-      "address": "12, route de Saint Mars La Réorthe 85590 LES EPESSES",
-      "contact_name": "BLETEAU Tony",
-      "contact_role": "Directeur opérationnel",
+      "id": "igol-picardie-ile-de-france",
+      "name": "IGOL PICARDIE ILE DE FRANCE",
+      "email": "eric.macleod@igol.com",
+      "siret": "57172129900014",
+      "address": "614 rue de Cagny - 80090 AMIENS",
+      "contact_name": "MACLEOD Eric",
+      "contact_role": "Responsable de Région",
       "contact_email": "",
       "rse_contact": "",
-      "responded_at": "23/02/2026 12:04:05",
+      "responded_at": "18/02/2026 08:54:54",
       "language": "fr",
-      "score_global": 80.5,
+      "score_global": 80.9,
       "level": "green",
       "scores": {
-        "gouvernance": 50.0,
+        "gouvernance": 64.3,
         "droits_humains": 75.0,
         "sst": 100.0,
         "ethique": 75.0,
-        "environnement": 72.2,
+        "environnement": 77.8,
         "achats": 100.0
       },
       "strengths": [
@@ -216,11 +217,42 @@
       ],
       "weaknesses": [],
       "recommendations": [
-        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
-        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
         "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
-        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes",
         "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
+      ]
+    },
+    {
+      "id": "antalis-france",
+      "name": "Antalis France",
+      "email": "pauline.darfeuille@antalis.com",
+      "siret": "41033076500547",
+      "address": "17 avenue de la porte des lilas, 75019 Paris",
+      "contact_name": "Pauline DARFEUILLE",
+      "contact_role": "Responsable ESG",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "24/02/2026 17:30:28",
+      "language": "fr",
+      "score_global": 80.5,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 72.2,
+        "achats": 50.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mettre en place un plan de suivi et de réduction des déchets à la source"
       ]
     },
     {
@@ -235,7 +267,7 @@
       "rse_contact": "",
       "responded_at": "18/02/2026 10:55:38",
       "language": "fr",
-      "score_global": 79.2,
+      "score_global": 77.6,
       "level": "green",
       "scores": {
         "gouvernance": 64.3,
@@ -259,39 +291,6 @@
       ]
     },
     {
-      "id": "antalis-france",
-      "name": "Antalis France",
-      "email": "pauline.darfeuille@antalis.com",
-      "siret": "41033076500547",
-      "address": "17 avenue de la porte des lilas, 75019 Paris",
-      "contact_name": "Pauline DARFEUILLE",
-      "contact_role": "Responsable ESG",
-      "contact_email": "",
-      "rse_contact": "",
-      "responded_at": "24/02/2026 17:30:28",
-      "language": "fr",
-      "score_global": 77.3,
-      "level": "green",
-      "scores": {
-        "gouvernance": 92.9,
-        "droits_humains": 75.0,
-        "sst": 100.0,
-        "ethique": 75.0,
-        "environnement": 72.2,
-        "achats": 50.0
-      },
-      "strengths": [
-        "gouvernance",
-        "sst"
-      ],
-      "weaknesses": [],
-      "recommendations": [
-        "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
-        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
-        "Mettre en place un plan de suivi et de réduction des déchets à la source"
-      ]
-    },
-    {
       "id": "columbia-france",
       "name": "COLUMBIA FRANCE",
       "email": "qualite@columbiafrance.fr",
@@ -303,7 +302,7 @@
       "rse_contact": "",
       "responded_at": "24/02/2026 11:25:08",
       "language": "fr",
-      "score_global": 73.2,
+      "score_global": 77.2,
       "level": "green",
       "scores": {
         "gouvernance": 92.9,
@@ -327,6 +326,41 @@
       ]
     },
     {
+      "id": "adp-85",
+      "name": "ADP 85",
+      "email": "t.bleteau@adp85.com",
+      "siret": "39889946800027",
+      "address": "12, route de Saint Mars La Réorthe 85590 LES EPESSES",
+      "contact_name": "BLETEAU Tony",
+      "contact_role": "Directeur opérationnel",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "23/02/2026 12:04:05",
+      "language": "fr",
+      "score_global": 76.9,
+      "level": "green",
+      "scores": {
+        "gouvernance": 50.0,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 72.2,
+        "achats": 100.0
+      },
+      "strengths": [
+        "sst",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
+      ]
+    },
+    {
       "id": "lacoste-dactyl-bureau-&-école",
       "name": "LACOSTE Dactyl Bureau & École",
       "email": "severine.rey@lacostedbe.fr",
@@ -338,7 +372,7 @@
       "rse_contact": "",
       "responded_at": "23/02/2026 14:44:23",
       "language": "fr",
-      "score_global": 72.1,
+      "score_global": 73.3,
       "level": "green",
       "scores": {
         "gouvernance": 92.9,
@@ -372,7 +406,7 @@
       "rse_contact": "",
       "responded_at": "23/02/2026 11:30:19",
       "language": "fr",
-      "score_global": 71.2,
+      "score_global": 67.4,
       "level": "green",
       "scores": {
         "gouvernance": 78.6,
@@ -408,7 +442,7 @@
       "rse_contact": "Yes",
       "responded_at": "20/02/2026 14:32:29",
       "language": "en",
-      "score_global": 62.3,
+      "score_global": 61.7,
       "level": "amber",
       "scores": {
         "gouvernance": 71.4,
@@ -443,7 +477,7 @@
       "rse_contact": "Yes",
       "responded_at": "24/02/2026 12:14:38",
       "language": "en",
-      "score_global": 56.0,
+      "score_global": 55.8,
       "level": "amber",
       "scores": {
         "gouvernance": 64.3,
@@ -481,7 +515,7 @@
       "rse_contact": "Yes",
       "responded_at": "18/02/2026 12:17:20",
       "language": "en",
-      "score_global": 54.5,
+      "score_global": 49.4,
       "level": "amber",
       "scores": {
         "gouvernance": 21.4,
@@ -520,7 +554,7 @@
       "rse_contact": "Yes",
       "responded_at": "23/02/2026 08:23:36",
       "language": "en",
-      "score_global": 54.5,
+      "score_global": 47.7,
       "level": "amber",
       "scores": {
         "gouvernance": 7.1,
@@ -547,44 +581,6 @@
       ]
     },
     {
-      "id": "helukabel-eltrona-sp.-z-o.o.",
-      "name": "Helukabel Eltrona sp. z o.o.",
-      "email": "artur-zmuda@eltron-kabel.pl",
-      "siret": "6320100775",
-      "address": "ul. Rozwojowa 14 43-600 Jaworzno",
-      "contact_name": "Artur Żmuda",
-      "contact_role": "Production Director",
-      "contact_email": "Tomasz Czopik, Quality engineer, tomasz.czopik@eltron-kabel.pl",
-      "rse_contact": "No",
-      "responded_at": "25/02/2026 10:58:30",
-      "language": "en",
-      "score_global": 18.6,
-      "level": "red",
-      "scores": {
-        "gouvernance": 0.0,
-        "droits_humains": 0.0,
-        "sst": 0.0,
-        "ethique": 0.0,
-        "environnement": 44.4,
-        "achats": 50.0
-      },
-      "strengths": [],
-      "weaknesses": [
-        "gouvernance",
-        "droits_humains",
-        "sst",
-        "ethique",
-        "environnement"
-      ],
-      "recommendations": [
-        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
-        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
-        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
-        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
-        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
-      ]
-    },
-    {
       "id": "vision-plast-france",
       "name": "VISION PLAST FRANCE",
       "email": "sylvain.chereau@vision-plast.com",
@@ -596,7 +592,7 @@
       "rse_contact": "",
       "responded_at": "25/02/2026 13:44:07",
       "language": "fr",
-      "score_global": 18.1,
+      "score_global": 14.4,
       "level": "red",
       "scores": {
         "gouvernance": 0.0,
@@ -623,25 +619,25 @@
       ]
     },
     {
-      "id": "lacme-dafeng-machinery-co.,ltd",
-      "name": "Lacme Dafeng Machinery Co.,Ltd",
-      "email": "maxime@lacmedf.com",
-      "siret": "91320982717447651A",
-      "address": "4, Xikang Lu, Industrial Zone, Dafeng Zone, 224100 Jiangsu,PRC",
-      "contact_name": "Maxime Zhanghuijun",
-      "contact_role": "General Manager",
-      "contact_email": "Maxime Zhang, GM, maxime@lacmedf.com",
+      "id": "helukabel-eltrona-sp.-z-o.o.",
+      "name": "Helukabel Eltrona sp. z o.o.",
+      "email": "artur-zmuda@eltron-kabel.pl",
+      "siret": "6320100775",
+      "address": "ul. Rozwojowa 14 43-600 Jaworzno",
+      "contact_name": "Artur Żmuda",
+      "contact_role": "Production Director",
+      "contact_email": "Tomasz Czopik, Quality engineer, tomasz.czopik@eltron-kabel.pl",
       "rse_contact": "No",
-      "responded_at": "24/02/2026 04:09:34",
-      "language": "cn",
-      "score_global": 15.8,
+      "responded_at": "25/02/2026 10:58:30",
+      "language": "en",
+      "score_global": 13.9,
       "level": "red",
       "scores": {
         "gouvernance": 0.0,
         "droits_humains": 0.0,
         "sst": 0.0,
         "ethique": 0.0,
-        "environnement": 33.3,
+        "environnement": 44.4,
         "achats": 50.0
       },
       "strengths": [],
@@ -672,7 +668,7 @@
       "rse_contact": "",
       "responded_at": "18/02/2026 11:09:04",
       "language": "fr",
-      "score_global": 15.3,
+      "score_global": 12.2,
       "level": "red",
       "scores": {
         "gouvernance": 0.0,
@@ -710,7 +706,7 @@
       "rse_contact": "",
       "responded_at": "26/02/2026 12:26:14",
       "language": "fr",
-      "score_global": 15.3,
+      "score_global": 12.2,
       "level": "red",
       "scores": {
         "gouvernance": 0.0,
@@ -737,6 +733,44 @@
       ]
     },
     {
+      "id": "lacme-dafeng-machinery-co.,ltd",
+      "name": "Lacme Dafeng Machinery Co.,Ltd",
+      "email": "maxime@lacmedf.com",
+      "siret": "91320982717447651A",
+      "address": "4, Xikang Lu, Industrial Zone, Dafeng Zone, 224100 Jiangsu,PRC",
+      "contact_name": "Maxime Zhanghuijun",
+      "contact_role": "General Manager",
+      "contact_email": "Maxime Zhang, GM, maxime@lacmedf.com",
+      "rse_contact": "No",
+      "responded_at": "24/02/2026 04:09:34",
+      "language": "cn",
+      "score_global": 11.7,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 33.3,
+        "achats": 50.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
       "id": "ne-ma-srl",
       "name": "NE-MA SRL",
       "email": "p.arrabito@nema-spa.it",
@@ -748,7 +782,7 @@
       "rse_contact": "No",
       "responded_at": "18/02/2026 12:14:34",
       "language": "en",
-      "score_global": 7.0,
+      "score_global": 5.6,
       "level": "red",
       "scores": {
         "gouvernance": 0.0,
@@ -787,7 +821,7 @@
       "rse_contact": "",
       "responded_at": "18/02/2026 14:15:28",
       "language": "fr",
-      "score_global": 4.2,
+      "score_global": 3.3,
       "level": "red",
       "scores": {
         "gouvernance": 0.0,
