@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_updated": "2026-03-03T09:11:36.170144",
-    "total_responded": 24,
-    "count_fr": 16,
+    "last_updated": "2026-03-04T08:48:45.895715",
+    "total_responded": 26,
+    "count_fr": 18,
     "count_en": 7,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 51.9,
+    "avg_score": 48.8,
     "by_pillar": {
-      "gouvernance": 47.9,
-      "droits_humains": 54.2,
-      "sst": 58.3,
-      "ethique": 39.6,
-      "environnement": 55.8,
-      "achats": 54.2
+      "gouvernance": 44.2,
+      "droits_humains": 50.0,
+      "sst": 53.8,
+      "ethique": 36.5,
+      "environnement": 56.2,
+      "achats": 50.0
     },
     "count_green": 12,
     "count_amber": 4,
-    "count_red": 8,
-    "top_pillar": "sst",
+    "count_red": 10,
+    "top_pillar": "environnement",
     "weak_pillar": "ethique"
   },
   "suppliers": [
@@ -619,6 +619,44 @@
       ]
     },
     {
+      "id": "brady-groupe-sas",
+      "name": "Brady groupe SAS",
+      "email": "coline_cauche@bradycorp.com",
+      "siret": "38306455700119",
+      "address": "2 rue de la troisième révolution industrielle",
+      "contact_name": "Cauche Coline",
+      "contact_role": "Assistante administrative",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "03/03/2026 10:00:38",
+      "language": "fr",
+      "score_global": 14.4,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 72.2,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
       "id": "helukabel-eltrona-sp.-z-o.o.",
       "name": "Helukabel Eltrona sp. z o.o.",
       "email": "artur-zmuda@eltron-kabel.pl",
@@ -765,6 +803,44 @@
       "recommendations": [
         "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
         "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
+      "id": "s.a.s-spr-palettes",
+      "name": "S.A.S SPR PALETTES",
+      "email": "laetitia.dafflonspr@hotmail.com",
+      "siret": "94212471000016",
+      "address": "49 rue jules verne 37520 La RICHE",
+      "contact_name": "dafflon laetitia",
+      "contact_role": "drh",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "03/03/2026 10:33:36",
+      "language": "fr",
+      "score_global": 10.0,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 50.0,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
         "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
         "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
         "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
