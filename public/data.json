@@ -1,23 +1,23 @@
 {
   "meta": {
-    "last_updated": "2026-03-04T08:48:45.895715",
-    "total_responded": 26,
+    "last_updated": "2026-03-04T09:19:37.225158",
+    "total_responded": 27,
     "count_fr": 18,
-    "count_en": 7,
+    "count_en": 8,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 48.8,
+    "avg_score": 49.1,
     "by_pillar": {
       "gouvernance": 44.2,
-      "droits_humains": 50.0,
-      "sst": 53.8,
-      "ethique": 36.5,
-      "environnement": 56.2,
-      "achats": 50.0
+      "droits_humains": 51.9,
+      "sst": 54.6,
+      "ethique": 36.1,
+      "environnement": 56.0,
+      "achats": 49.1
     },
     "count_green": 12,
-    "count_amber": 4,
+    "count_amber": 5,
     "count_red": 10,
     "top_pillar": "environnement",
     "weak_pillar": "ethique"
@@ -501,6 +501,44 @@
         "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
         "Mettre en place un plan de suivi et de réduction des déchets à la source",
         "Déployer des actions d'efficacité énergétique (LED, isolation, équipements moins énergivores, énergies renouvelables)"
+      ]
+    },
+    {
+      "id": "iskra,-d.o.o.",
+      "name": "ISKRA, d.o.o.",
+      "email": "ales.dolinsek@iskra.eu",
+      "siret": "5185726",
+      "address": "Stegne 21, 1000 Ljubljana, Slovenia",
+      "contact_name": "Ales Dolinsek",
+      "contact_role": "Strategic Procurement & key account manager",
+      "contact_email": "Irena Primc Dolinsek, Technologist, Irena.PrimcDolinsek@iskra.eu",
+      "rse_contact": "Yes",
+      "responded_at": "04/03/2026 08:56:09",
+      "language": "en",
+      "score_global": 54.8,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 42.9,
+        "droits_humains": 100.0,
+        "sst": 75.0,
+        "ethique": 25.0,
+        "environnement": 50.0,
+        "achats": 25.0
+      },
+      "strengths": [
+        "droits_humains"
+      ],
+      "weaknesses": [
+        "gouvernance",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social, SST)",
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
       ]
     },
     {
