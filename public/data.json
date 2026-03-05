@@ -1,22 +1,22 @@
 {
   "meta": {
-    "last_updated": "2026-03-04T16:34:38.184281",
-    "total_responded": 27,
-    "count_fr": 18,
+    "last_updated": "2026-03-05T10:29:36.821449",
+    "total_responded": 28,
+    "count_fr": 19,
     "count_en": 8,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 49.1,
+    "avg_score": 50.1,
     "by_pillar": {
-      "gouvernance": 44.2,
-      "droits_humains": 51.9,
-      "sst": 54.6,
-      "ethique": 36.1,
-      "environnement": 56.0,
+      "gouvernance": 45.4,
+      "droits_humains": 52.7,
+      "sst": 56.2,
+      "ethique": 37.5,
+      "environnement": 56.7,
       "achats": 49.1
     },
-    "count_green": 12,
+    "count_green": 13,
     "count_amber": 5,
     "count_red": 10,
     "top_pillar": "environnement",
@@ -253,6 +253,38 @@
         "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
         "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
         "Mettre en place un plan de suivi et de réduction des déchets à la source"
+      ]
+    },
+    {
+      "id": "imprimerie-vincent",
+      "name": "IMPRIMERIE VINCENT",
+      "email": "anthony.baussan@imp-vincent.fr",
+      "siret": "30122293140",
+      "address": "32 Avenue Thérèse Voisin 37000 Tours",
+      "contact_name": "BAUSSAN Anthony",
+      "contact_role": "Directeur",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "05/03/2026 10:12:22",
+      "language": "fr",
+      "score_global": 78.8,
+      "level": "green",
+      "scores": {
+        "gouvernance": 78.6,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 77.8,
+        "achats": 50.0
+      },
+      "strengths": [
+        "sst"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)"
       ]
     },
     {
