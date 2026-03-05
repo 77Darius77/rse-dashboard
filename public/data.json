@@ -1,28 +1,61 @@
 {
   "meta": {
-    "last_updated": "2026-03-05T14:29:33.261927",
-    "total_responded": 28,
-    "count_fr": 19,
-    "count_en": 8,
+    "last_updated": "2026-03-05T17:15:40.163815",
+    "total_responded": 31,
+    "count_fr": 21,
+    "count_en": 9,
     "count_cn": 1
   },
   "collective": {
     "avg_score": 50.1,
     "by_pillar": {
-      "gouvernance": 45.4,
-      "droits_humains": 52.7,
-      "sst": 56.2,
-      "ethique": 37.5,
-      "environnement": 56.7,
-      "achats": 49.1
+      "gouvernance": 44.7,
+      "droits_humains": 53.2,
+      "sst": 56.5,
+      "ethique": 37.1,
+      "environnement": 57.3,
+      "achats": 48.4
     },
-    "count_green": 13,
-    "count_amber": 5,
-    "count_red": 10,
+    "count_green": 14,
+    "count_amber": 6,
+    "count_red": 11,
     "top_pillar": "environnement",
     "weak_pillar": "ethique"
   },
   "suppliers": [
+    {
+      "id": "publigraphic",
+      "name": "PUBLIGRAPHIC",
+      "email": "commercial@publigraphic.fr",
+      "siret": "30127596200019",
+      "address": "Route de Quimper 29120 PONT-L'ABBE",
+      "contact_name": "BUTON BEATRICE",
+      "contact_role": "Adminsitrative",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "05/03/2026 16:06:12",
+      "language": "fr",
+      "score_global": 87.7,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 83.3,
+        "achats": 100.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst",
+        "environnement",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
+      ]
+    },
     {
       "id": "contac-solutions-ab",
       "name": "Contac Solutions AB",
@@ -613,6 +646,45 @@
       ]
     },
     {
+      "id": "a.s.t.r.a.-refrigeranti-srl",
+      "name": "A.S.T.R.A. REFRIGERANTI SRL",
+      "email": "lorenzo.vuerich@baglionispa.com",
+      "siret": "N.A.",
+      "address": "VIA VILLATA 2 28060 CASALVOLONE (NO) ITALY",
+      "contact_name": "LORENZO VUERICH",
+      "contact_role": "EXECUTIVE OPERATIONS",
+      "contact_email": "EXECUTIVE OPERATIONS",
+      "rse_contact": "Yes",
+      "responded_at": "05/03/2026 16:46:43",
+      "language": "en",
+      "score_global": 48.3,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 21.4,
+        "droits_humains": 100.0,
+        "sst": 75.0,
+        "ethique": 25.0,
+        "environnement": 38.9,
+        "achats": 25.0
+      },
+      "strengths": [
+        "droits_humains"
+      ],
+      "weaknesses": [
+        "gouvernance",
+        "ethique",
+        "environnement",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social, SST)"
+      ]
+    },
+    {
       "id": "master-cheng-tack-&-hardware-corp.",
       "name": "Master Cheng Tack & Hardware Corp.",
       "email": "benrayder@gmail.com",
@@ -759,6 +831,44 @@
       "recommendations": [
         "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
         "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
+      "id": "roche-emballages-plastiques",
+      "name": "ROCHE EMBALLAGES PLASTIQUES",
+      "email": "qualite@rep-snel.com",
+      "siret": "33777230500021",
+      "address": "ZI CHAVANON 43120 MONISTROL SUR LOIRE",
+      "contact_name": "Nathalie -",
+      "contact_role": "Animatrice QHSE",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "05/03/2026 17:09:58",
+      "language": "fr",
+      "score_global": 13.3,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 66.7,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
         "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
         "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
         "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
