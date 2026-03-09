@@ -1,23 +1,23 @@
 {
   "meta": {
-    "last_updated": "2026-03-06T09:56:16.101783",
-    "total_responded": 31,
+    "last_updated": "2026-03-09T08:18:03.238843",
+    "total_responded": 32,
     "count_fr": 21,
-    "count_en": 9,
+    "count_en": 10,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 50.1,
+    "avg_score": 50.4,
     "by_pillar": {
-      "gouvernance": 44.7,
-      "droits_humains": 53.2,
-      "sst": 56.5,
-      "ethique": 37.1,
-      "environnement": 57.3,
-      "achats": 48.4
+      "gouvernance": 45.3,
+      "droits_humains": 54.7,
+      "sst": 57.0,
+      "ethique": 36.7,
+      "environnement": 57.5,
+      "achats": 47.7
     },
     "count_green": 14,
-    "count_amber": 6,
+    "count_amber": 7,
     "count_red": 11,
     "top_pillar": "environnement",
     "weak_pillar": "ethique"
@@ -528,6 +528,41 @@
         "Former les collaborateurs aux enjeux RSE (éthique, environnement, social, SST)",
         "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
         "Réduire l'empreinte carbone liée au transport (optimisation logistique, véhicules propres, plan de mobilité)"
+      ]
+    },
+    {
+      "id": "dong-guan-zhong-kang-technology-electronics-co.,lt",
+      "name": "Dong Guan Zhong Kang Technology Electronics CO.,LTD",
+      "email": "markma@zk-keji.com",
+      "siret": "91441900588291573K",
+      "address": "No.12 , Yansha Road,  Tianxin,  Tangxia Town,  Dongguan City,   Guangdong Province, China",
+      "contact_name": "Mark Ma",
+      "contact_role": "Sales Supervisor",
+      "contact_email": "Mark Ma, Sales Supervisor",
+      "rse_contact": "Yes",
+      "responded_at": "09/03/2026 03:52:22",
+      "language": "en",
+      "score_global": 61.3,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 64.3,
+        "droits_humains": 100.0,
+        "sst": 75.0,
+        "ethique": 25.0,
+        "environnement": 61.1,
+        "achats": 25.0
+      },
+      "strengths": [
+        "droits_humains"
+      ],
+      "weaknesses": [
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Former les collaborateurs aux enjeux RSE (éthique, environnement, social, SST)",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes"
       ]
     },
     {
