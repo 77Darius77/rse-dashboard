@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_updated": "2026-03-09T08:18:03.238843",
-    "total_responded": 32,
-    "count_fr": 21,
+    "last_updated": "2026-03-10T08:37:43.798782",
+    "total_responded": 33,
+    "count_fr": 22,
     "count_en": 10,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 50.4,
+    "avg_score": 51.3,
     "by_pillar": {
-      "gouvernance": 45.3,
-      "droits_humains": 54.7,
-      "sst": 57.0,
-      "ethique": 36.7,
-      "environnement": 57.5,
-      "achats": 47.7
+      "gouvernance": 46.3,
+      "droits_humains": 55.3,
+      "sst": 58.3,
+      "ethique": 37.9,
+      "environnement": 57.4,
+      "achats": 49.2
     },
-    "count_green": 14,
+    "count_green": 15,
     "count_amber": 7,
     "count_red": 11,
-    "top_pillar": "environnement",
+    "top_pillar": "sst",
     "weak_pillar": "ethique"
   },
   "suppliers": [
@@ -286,6 +286,41 @@
         "Définir des exigences RSE minimales pour vos fournisseurs et les intégrer dans les contrats et processus d'achats",
         "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
         "Mettre en place un plan de suivi et de réduction des déchets à la source"
+      ]
+    },
+    {
+      "id": "filmetal",
+      "name": "Filmetal",
+      "email": "gngwabap@conflandey.com",
+      "siret": "78447601200058",
+      "address": "2 Boulevard de Strasbourg, 77600 Bussy-Saint-Georges",
+      "contact_name": "GILLES BRICE NGWABAP TADJOM",
+      "contact_role": "Responsable Commercial",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "09/03/2026 09:28:31",
+      "language": "fr",
+      "score_global": 79.3,
+      "level": "green",
+      "scores": {
+        "gouvernance": 78.6,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 55.6,
+        "achats": 100.0
+      },
+      "strengths": [
+        "sst",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Structurer le management environnemental via une certification ISO 14001 ou un système de management environnemental simplifié",
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)",
+        "Mesurer les émissions de CO2 liées au transport des marchandises (bilan carbone transport)",
+        "Engager une démarche d'éco-conception pour réduire l'impact environnemental des produits (matériaux recyclés, réduction des emballages, durabilité, ACV)",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)"
       ]
     },
     {
