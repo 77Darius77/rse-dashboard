@@ -1,23 +1,23 @@
 {
   "meta": {
-    "last_updated": "2026-03-11T12:27:04.574021",
-    "total_responded": 33,
+    "last_updated": "2026-03-11T14:53:27.339740",
+    "total_responded": 34,
     "count_fr": 22,
-    "count_en": 10,
+    "count_en": 11,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 51.3,
+    "avg_score": 51.2,
     "by_pillar": {
-      "gouvernance": 46.3,
-      "droits_humains": 55.3,
-      "sst": 58.3,
-      "ethique": 37.9,
+      "gouvernance": 45.0,
+      "droits_humains": 56.6,
+      "sst": 58.8,
+      "ethique": 37.5,
       "environnement": 57.4,
-      "achats": 49.2
+      "achats": 48.5
     },
     "count_green": 15,
-    "count_amber": 7,
+    "count_amber": 8,
     "count_red": 11,
     "top_pillar": "sst",
     "weak_pillar": "ethique"
@@ -790,6 +790,44 @@
         "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
         "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires",
         "Instaurer un dispositif de remontée des préoccupations et alertes éthiques pour les parties prenantes"
+      ]
+    },
+    {
+      "id": "aerograficos-gahe,sa",
+      "name": "Aerograficos GAHE,SA",
+      "email": "export@gahesa.com",
+      "siret": "A34015792",
+      "address": "Avenida Comunidad Europea 83, Villamuriel de Cerrato",
+      "contact_name": "Erika Martinez Pimentel",
+      "contact_role": "International Department",
+      "contact_email": "MANUEL JUNCO NAVASCUÉS - desarrollo@gahesa.com - Technical Office",
+      "rse_contact": "Yes",
+      "responded_at": "11/03/2026 13:25:44",
+      "language": "en",
+      "score_global": 47.4,
+      "level": "amber",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 100.0,
+        "sst": 75.0,
+        "ethique": 25.0,
+        "environnement": 55.6,
+        "achats": 25.0
+      },
+      "strengths": [
+        "droits_humains"
+      ],
+      "weaknesses": [
+        "gouvernance",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
       ]
     },
     {
