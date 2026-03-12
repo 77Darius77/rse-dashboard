@@ -1,24 +1,24 @@
 {
   "meta": {
-    "last_updated": "2026-03-11T14:53:27.339740",
-    "total_responded": 34,
+    "last_updated": "2026-03-12T15:48:35.396102",
+    "total_responded": 35,
     "count_fr": 22,
-    "count_en": 11,
+    "count_en": 12,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 51.2,
+    "avg_score": 50.0,
     "by_pillar": {
-      "gouvernance": 45.0,
-      "droits_humains": 56.6,
-      "sst": 58.8,
-      "ethique": 37.5,
-      "environnement": 57.4,
-      "achats": 48.5
+      "gouvernance": 43.7,
+      "droits_humains": 55.0,
+      "sst": 57.1,
+      "ethique": 36.4,
+      "environnement": 56.5,
+      "achats": 48.6
     },
     "count_green": 15,
     "count_amber": 8,
-    "count_red": 11,
+    "count_red": 12,
     "top_pillar": "sst",
     "weak_pillar": "ethique"
   },
@@ -1078,6 +1078,44 @@
         "sst": 0.0,
         "ethique": 0.0,
         "environnement": 33.3,
+        "achats": 50.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
+      "id": "zhenli--intelligent-equipment-(zhe-jiang)-co.,ltd",
+      "name": "ZHENLI  INTELLIGENT EQUIPMENT (ZHE JIANG) CO.,LTD",
+      "email": "sales01@anlimotor.com",
+      "siret": "91331081MA7CP07M1T",
+      "address": "NO.12 1ST STREET EAST INDUSTRY CENTER WENLING CITY ZHEJIANG CHINA",
+      "contact_name": "Lucy",
+      "contact_role": "Sales Manager",
+      "contact_email": "same",
+      "rse_contact": "No",
+      "responded_at": "12/03/2026 09:32:45",
+      "language": "en",
+      "score_global": 10.6,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 27.8,
         "achats": 50.0
       },
       "strengths": [],
