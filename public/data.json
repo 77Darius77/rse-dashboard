@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_updated": "2026-03-16T10:11:19.659720",
-    "total_responded": 35,
-    "count_fr": 22,
-    "count_en": 12,
+    "last_updated": "2026-03-18T08:39:18.357425",
+    "total_responded": 37,
+    "count_fr": 23,
+    "count_en": 13,
     "count_cn": 1
   },
   "collective": {
-    "avg_score": 50.0,
+    "avg_score": 48.0,
     "by_pillar": {
-      "gouvernance": 43.7,
-      "droits_humains": 55.0,
-      "sst": 57.1,
-      "ethique": 36.4,
-      "environnement": 56.5,
-      "achats": 48.6
+      "gouvernance": 41.3,
+      "droits_humains": 52.0,
+      "sst": 54.1,
+      "ethique": 34.5,
+      "environnement": 56.0,
+      "achats": 47.3
     },
     "count_green": 15,
     "count_amber": 8,
-    "count_red": 12,
-    "top_pillar": "sst",
+    "count_red": 14,
+    "top_pillar": "environnement",
     "weak_pillar": "ethique"
   },
   "suppliers": [
@@ -1059,6 +1059,82 @@
       ]
     },
     {
+      "id": "rs-oracle---kprim-impressions",
+      "name": "RS oracle - Kprim impressions",
+      "email": "bastien.b@kprim-impressions.fr",
+      "siret": "9808730870012",
+      "address": "47 rue Du Maine",
+      "contact_name": "Bastien Bautrait",
+      "contact_role": "Gérant",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "16/03/2026 17:10:08",
+      "language": "fr",
+      "score_global": 12.2,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 61.1,
+        "achats": 0.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "achats"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp, Lucie 26000...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
+      "id": "pomelac",
+      "name": "Pomelac",
+      "email": "ewa.trzcinska@pomelac.pl",
+      "siret": "PL 762-10-11-908",
+      "address": "Kasztanowa 11, 07-200 Wyszkow, POLAND",
+      "contact_name": "Ewa Trzcińska",
+      "contact_role": "Commercial Director",
+      "contact_email": "Ewa Trzcinska, Commercial Director, ewa.trzcinska@pomelac.pl",
+      "rse_contact": "No",
+      "responded_at": "17/03/2026 15:20:05",
+      "language": "en",
+      "score_global": 11.7,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 33.3,
+        "achats": 50.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
       "id": "lacme-dafeng-machinery-co.,ltd",
       "name": "Lacme Dafeng Machinery Co.,Ltd",
       "email": "maxime@lacmedf.com",
@@ -1104,7 +1180,7 @@
       "address": "NO.12 1ST STREET EAST INDUSTRY CENTER WENLING CITY ZHEJIANG CHINA",
       "contact_name": "Lucy",
       "contact_role": "Sales Manager",
-      "contact_email": "same",
+      "contact_email": "sales01@anlimotor.com",
       "rse_contact": "No",
       "responded_at": "12/03/2026 09:32:45",
       "language": "en",
