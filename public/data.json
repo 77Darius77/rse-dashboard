@@ -1,24 +1,24 @@
 {
   "meta": {
-    "last_updated": "2026-04-16T12:14:25.064643",
-    "total_responded": 38,
+    "last_updated": "2026-04-22T08:50:21.831638",
+    "total_responded": 39,
     "count_fr": 23,
     "count_en": 14,
-    "count_cn": 1
+    "count_cn": 2
   },
   "collective": {
-    "avg_score": 48.1,
+    "avg_score": 47.2,
     "by_pillar": {
-      "gouvernance": 41.4,
-      "droits_humains": 53.3,
-      "sst": 54.6,
-      "ethique": 34.2,
-      "environnement": 55.7,
-      "achats": 46.7
+      "gouvernance": 40.3,
+      "droits_humains": 51.9,
+      "sst": 53.2,
+      "ethique": 33.3,
+      "environnement": 55.4,
+      "achats": 46.8
     },
     "count_green": 15,
     "count_amber": 9,
-    "count_red": 14,
+    "count_red": 15,
     "top_pillar": "environnement",
     "weak_pillar": "ethique"
   },
@@ -957,6 +957,44 @@
       "rse_contact": "No",
       "responded_at": "25/02/2026 10:58:30",
       "language": "en",
+      "score_global": 13.9,
+      "level": "red",
+      "scores": {
+        "gouvernance": 0.0,
+        "droits_humains": 0.0,
+        "sst": 0.0,
+        "ethique": 0.0,
+        "environnement": 44.4,
+        "achats": 50.0
+      },
+      "strengths": [],
+      "weaknesses": [
+        "gouvernance",
+        "droits_humains",
+        "sst",
+        "ethique",
+        "environnement"
+      ],
+      "recommendations": [
+        "Initier une démarche RSE structurée : formaliser une politique, des objectifs mesurables et un plan d'action",
+        "Engager une démarche de certification RSE auprès d'un organisme tiers (EcoVadis, ISO 26000, B Corp...)",
+        "Nommer un référent RSE interne chargé de coordonner et d'animer la démarche",
+        "Publier un rapport RSE ou développement durable annuel (référentiel GRI disponible)",
+        "Rédiger et diffuser un code de conduite RSE à l'ensemble des collaborateurs et partenaires"
+      ]
+    },
+    {
+      "id": "yongkang-haili-hongcheng-industry-and-trade-co.,lt",
+      "name": "YONGKANG HAILI HONGCHENG INDUSTRY AND TRADE CO.,LTD",
+      "email": "sales10@hailichina.com",
+      "siret": "251510",
+      "address": "No. 80 Yuegui South Road, Xicheng Street ,Yongkang City, Zhejiang Province China",
+      "contact_name": "Vicky Ma",
+      "contact_role": "Sales",
+      "contact_email": "Weng Lijing Director of Administration sales1@hailichina.com",
+      "rse_contact": "No",
+      "responded_at": "22/04/2026 08:43:30",
+      "language": "cn",
       "score_global": 13.9,
       "level": "red",
       "scores": {
