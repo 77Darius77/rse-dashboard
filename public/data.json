@@ -1,22 +1,22 @@
 {
   "meta": {
-    "last_updated": "2026-04-29T14:34:43.129247",
-    "total_responded": 39,
-    "count_fr": 23,
+    "last_updated": "2026-05-11T09:59:58.501587",
+    "total_responded": 40,
+    "count_fr": 24,
     "count_en": 14,
     "count_cn": 2
   },
   "collective": {
-    "avg_score": 47.2,
+    "avg_score": 48.3,
     "by_pillar": {
-      "gouvernance": 40.3,
-      "droits_humains": 51.9,
-      "sst": 53.2,
-      "ethique": 33.3,
-      "environnement": 55.4,
-      "achats": 46.8
+      "gouvernance": 41.6,
+      "droits_humains": 52.5,
+      "sst": 54.4,
+      "ethique": 34.4,
+      "environnement": 56.1,
+      "achats": 48.1
     },
-    "count_green": 15,
+    "count_green": 16,
     "count_amber": 9,
     "count_red": 15,
     "top_pillar": "environnement",
@@ -34,6 +34,39 @@
       "contact_email": "",
       "rse_contact": "",
       "responded_at": "05/03/2026 16:06:12",
+      "language": "fr",
+      "score_global": 87.7,
+      "level": "green",
+      "scores": {
+        "gouvernance": 92.9,
+        "droits_humains": 75.0,
+        "sst": 100.0,
+        "ethique": 75.0,
+        "environnement": 83.3,
+        "achats": 100.0
+      },
+      "strengths": [
+        "gouvernance",
+        "sst",
+        "environnement",
+        "achats"
+      ],
+      "weaknesses": [],
+      "recommendations": [
+        "Suivre des indicateurs environnementaux de base (énergie, eau, déchets, émissions CO2)"
+      ]
+    },
+    {
+      "id": "posson-packaging",
+      "name": "POSSON PACKAGING",
+      "email": "ldumont@posson.fr",
+      "siret": "57725008700035",
+      "address": "134 rue d'Italie 72300 LOUAILLES",
+      "contact_name": "LAURENT DUMONT",
+      "contact_role": "Directeur général délégué",
+      "contact_email": "",
+      "rse_contact": "",
+      "responded_at": "30/04/2026 19:47:31",
       "language": "fr",
       "score_global": 87.7,
       "level": "green",
