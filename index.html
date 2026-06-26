@@ -787,16 +787,37 @@
                   </td>
 
                   <!-- Contact -->
-                  <td class="px-3 py-3 hide-mobile">
-                    <div class="text-sm text-gray-600 truncate max-w-[140px]" x-text="entry.contact || '—'"></div>
+                  <td class="px-3 py-3 hide-mobile" @click.stop>
+                    <div class="relative">
+                      <div x-show="editingContact !== entry.row"
+                        @click="editingContact = entry.row; $nextTick(() => $el.parentElement.querySelector('input').focus())"
+                        class="text-sm cursor-pointer hover:bg-gray-100 rounded px-1 py-0.5 min-h-[1.75rem] min-w-[80px] truncate max-w-[140px] flex items-center"
+                        :class="entry.contact ? 'text-gray-600' : 'text-gray-300 italic'"
+                        x-text="entry.contact || 'Ajouter…'"></div>
+                      <input type="text" x-show="editingContact === entry.row" style="display:none"
+                        :value="entry.contact"
+                        @blur="saveContact(entry, $event.target.value)"
+                        @keydown.enter.prevent="saveContact(entry, $event.target.value)"
+                        @keydown.escape="editingContact = null"
+                        class="w-full px-2 py-1 border border-accent rounded text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 min-w-[120px]" />
+                    </div>
                   </td>
 
                   <!-- Email -->
-                  <td class="px-3 py-3 hide-mobile">
-                    <a x-show="entry.email" :href="'mailto:' + entry.email"
-                      class="text-accent hover:underline text-xs truncate block max-w-[180px]"
-                      x-text="entry.email" style="display:none"></a>
-                    <span x-show="!entry.email" class="text-gray-400 text-xs">—</span>
+                  <td class="px-3 py-3 hide-mobile" @click.stop>
+                    <div class="relative">
+                      <div x-show="editingEmail !== entry.row"
+                        @click="editingEmail = entry.row; $nextTick(() => $el.parentElement.querySelector('input').focus())"
+                        class="text-sm cursor-pointer hover:bg-gray-100 rounded px-1 py-0.5 min-h-[1.75rem] min-w-[80px] truncate max-w-[180px] flex items-center"
+                        :class="entry.email ? 'text-accent underline' : 'text-gray-300 italic'"
+                        x-text="entry.email || 'Ajouter…'"></div>
+                      <input type="email" x-show="editingEmail === entry.row" style="display:none"
+                        :value="entry.email"
+                        @blur="saveEmail(entry, $event.target.value)"
+                        @keydown.enter.prevent="saveEmail(entry, $event.target.value)"
+                        @keydown.escape="editingEmail = null"
+                        class="w-full px-2 py-1 border border-accent rounded text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 min-w-[140px]" />
+                    </div>
                   </td>
 
                   <!-- Code de Conduite — checkbox stylisée -->

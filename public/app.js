@@ -625,6 +625,8 @@ function codeConduiteView() {
     sortKey:            'name_asc',
     pendingRequests:    0,
     editingCommentaire: null,
+    editingContact:     null,
+    editingEmail:       null,
     classementSuppliers: [],
     showModal:          false,
     modalMode:          'add',
@@ -732,33 +734,41 @@ function codeConduiteView() {
       }
     },
 
-    async saveCommentaire(entry, val) {
-      const oldVal = entry.commentaire;
-      if (val === oldVal) { this.editingCommentaire = null; return; }
-
-      // Mise à jour optimiste
-      entry.commentaire      = val;
-      this.editingCommentaire = null;
+    async _saveField(entry, field, val, clearFn) {
+      const oldVal = entry[field];
+      if (val === oldVal) { clearFn(); return; }
+      entry[field] = val;
+      clearFn();
       this._saveCache();
-
       if (!CODE_CONDUITE_SCRIPT_URL) return;
-
       this.pendingRequests++;
       try {
         const url = CODE_CONDUITE_SCRIPT_URL
           + '?action=update&row=' + entry.row
-          + '&field=commentaire&value=' + encodeURIComponent(val);
+          + '&field=' + field + '&value=' + encodeURIComponent(val);
         const json = await _ccJsonp(url);
         if (json.error) throw new Error(json.error);
         this.lastSync  = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
         this.syncError = null;
       } catch (e) {
-        entry.commentaire = oldVal;
+        entry[field] = oldVal;
         this._saveCache();
         this.syncError = 'Erreur de synchronisation';
       } finally {
         this.pendingRequests--;
       }
+    },
+
+    async saveCommentaire(entry, val) {
+      await this._saveField(entry, 'commentaire', val, () => { this.editingCommentaire = null; });
+    },
+
+    async saveContact(entry, val) {
+      await this._saveField(entry, 'contact', val, () => { this.editingContact = null; });
+    },
+
+    async saveEmail(entry, val) {
+      await this._saveField(entry, 'email', val, () => { this.editingEmail = null; });
     },
 
     _saveCache() {
