@@ -621,17 +621,29 @@ function codeConduiteView() {
     syncError:          null,
     lastSync:           null,
     search:             '',
-    filterStatus:       '',           // '' | 'signed' | 'unsigned'
-    sortKey:            'name_asc',   // 'name_asc' | 'name_desc' | 'signed_first' | 'unsigned_first' | 'sheet_order'
+    filterStatus:       '',
+    sortKey:            'name_asc',
     pendingRequests:    0,
-    editingCommentaire: null,         // entry.row en cours d'édition, ou null
+    editingCommentaire: null,
+    classementSuppliers: [],
+    showModal:          false,
+    modalMode:          'add',
+    modalForm:          { row: null, fournisseur: '', fournisseurCustom: '', contact: '', email: '' },
 
     async init() {
-      // Affichage instantané depuis le cache localStorage
       const cached = localStorage.getItem(CACHE_KEY);
       if (cached) {
         try { this.entries = JSON.parse(cached); } catch (_) {}
       }
+
+      // Charger les noms du classement pour le menu déroulant
+      try {
+        const res = await fetch('public/data.json');
+        const d = await res.json();
+        this.classementSuppliers = (d.suppliers || [])
+          .map(s => s.name)
+          .sort((a, b) => a.localeCompare(b, 'fr'));
+      } catch (_) {}
 
       if (!CODE_CONDUITE_SCRIPT_URL) return;
 
@@ -759,6 +771,110 @@ function codeConduiteView() {
 
     isConfigured() {
       return !!CODE_CONDUITE_SCRIPT_URL;
+    },
+
+    openAddModal() {
+      this.modalMode = 'add';
+      this.modalForm = { row: null, fournisseur: '', fournisseurCustom: '', contact: '', email: '' };
+      this.showModal = true;
+    },
+
+    openEditModal(entry) {
+      this.modalMode = 'edit';
+      const inClassement = this.classementSuppliers.includes(entry.fournisseur);
+      this.modalForm = {
+        row:              entry.row,
+        fournisseur:      inClassement ? entry.fournisseur : '__autre__',
+        fournisseurCustom: inClassement ? '' : entry.fournisseur,
+        contact:          entry.contact,
+        email:            entry.email
+      };
+      this.showModal = true;
+    },
+
+    closeModal() {
+      this.showModal = false;
+    },
+
+    _fournisseurFinal() {
+      return this.modalForm.fournisseur === '__autre__'
+        ? this.modalForm.fournisseurCustom.trim()
+        : this.modalForm.fournisseur;
+    },
+
+    async saveModal() {
+      if (this.modalMode === 'add') await this._addEntry();
+      else await this._editEntry();
+    },
+
+    async _addEntry() {
+      const nom = this._fournisseurFinal();
+      if (!nom) return;
+      const f = this.modalForm;
+
+      if (CODE_CONDUITE_SCRIPT_URL) {
+        this.pendingRequests++;
+        try {
+          const url = CODE_CONDUITE_SCRIPT_URL
+            + '?action=add'
+            + '&fournisseur=' + encodeURIComponent(nom)
+            + '&contact='     + encodeURIComponent(f.contact)
+            + '&email='       + encodeURIComponent(f.email);
+          const json = await _ccJsonp(url);
+          if (json.error) throw new Error(json.error);
+          this.entries.push({ row: json.row, fournisseur: nom, contact: f.contact, email: f.email, code_conduite: '', questionnaire: '', commentaire: '' });
+          this._saveCache();
+          this.lastSync  = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+          this.syncError = null;
+        } catch (e) {
+          this.syncError = 'Erreur lors de l\'ajout : ' + e.message;
+        } finally {
+          this.pendingRequests--;
+        }
+      } else {
+        this.entries.push({ row: Date.now(), fournisseur: nom, contact: f.contact, email: f.email, code_conduite: '', questionnaire: '', commentaire: '' });
+        this._saveCache();
+      }
+      this.showModal = false;
+    },
+
+    async _editEntry() {
+      const nom = this._fournisseurFinal();
+      if (!nom) return;
+      const f     = this.modalForm;
+      const entry = this.entries.find(e => e.row === f.row);
+      if (!entry) return;
+
+      const prev = { fournisseur: entry.fournisseur, contact: entry.contact, email: entry.email };
+      entry.fournisseur = nom;
+      entry.contact     = f.contact;
+      entry.email       = f.email;
+      this._saveCache();
+      this.showModal = false;
+
+      if (!CODE_CONDUITE_SCRIPT_URL) return;
+
+      this.pendingRequests++;
+      try {
+        for (const [field, value] of [['fournisseur', nom], ['contact', f.contact], ['email', f.email]]) {
+          const url = CODE_CONDUITE_SCRIPT_URL
+            + '?action=update&row=' + f.row
+            + '&field=' + field
+            + '&value=' + encodeURIComponent(value);
+          const json = await _ccJsonp(url);
+          if (json.error) throw new Error(json.error);
+        }
+        this.lastSync  = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+        this.syncError = null;
+      } catch (e) {
+        entry.fournisseur = prev.fournisseur;
+        entry.contact     = prev.contact;
+        entry.email       = prev.email;
+        this._saveCache();
+        this.syncError = 'Erreur de synchronisation';
+      } finally {
+        this.pendingRequests--;
+      }
     }
   };
 }
