@@ -684,6 +684,175 @@
 
       </div><!-- /comparaison -->
 
+      <!-- ==================== VUE CODE DE CONDUITE ==================== -->
+      <div x-show="view==='code-conduite'" class="fade-in" x-data="codeConduiteView()" x-init="init()">
+
+        <!-- En-tête -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h1 class="text-xl font-bold text-gray-900">Code de Conduite Fournisseurs</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Suivi des engagements au Code de Conduite</p>
+          </div>
+
+          <div class="flex items-center gap-3 flex-wrap">
+            <!-- Badge compteur -->
+            <div class="flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-lg">
+              <i data-lucide="shield-check" class="w-4 h-4 text-accent"></i>
+              <span class="text-sm font-semibold text-accent">
+                <span x-text="signedCount()"></span> / <span x-text="entries.length"></span> ont signé
+              </span>
+            </div>
+            <!-- Indicateur de synchronisation -->
+            <div class="flex items-center gap-1.5 text-xs min-w-[120px]">
+              <i data-lucide="loader-2" class="w-3.5 h-3.5 text-accent animate-spin" x-show="pendingRequests > 0" style="display:none"></i>
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-green-500" x-show="pendingRequests === 0 && lastSync && !syncError" style="display:none"></i>
+              <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-danger" x-show="syncError" style="display:none"></i>
+              <span x-show="pendingRequests > 0" class="text-gray-400" style="display:none">Sync…</span>
+              <span x-show="pendingRequests === 0 && lastSync && !syncError" class="text-gray-400" x-text="'Sync : ' + lastSync" style="display:none"></span>
+              <span x-show="syncError" class="text-danger text-xs" x-text="syncError" style="display:none"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message de configuration si URL non renseignée -->
+        <div x-show="!isConfigured()" class="card border border-amber-200 bg-amber-50/50 mb-6" style="display:none">
+          <div class="flex items-start gap-3">
+            <i data-lucide="settings" class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5"></i>
+            <div>
+              <h3 class="font-semibold text-amber-800 mb-1">Configuration requise</h3>
+              <p class="text-sm text-amber-700 mb-3">
+                Renseignez <code class="font-mono bg-amber-100 px-1 rounded">CODE_CONDUITE_SCRIPT_URL</code> dans
+                <code class="font-mono bg-amber-100 px-1 rounded">public/app.js</code> avec l'URL du Google Apps Script déployé.
+              </p>
+              <ol class="text-sm text-amber-700 space-y-1 list-decimal list-inside">
+                <li>Google Sheet → <strong>Extensions → Apps Script</strong></li>
+                <li>Coller le script de <code class="font-mono bg-amber-100 px-1 rounded">docs/apps-script/code-conduite.gs</code></li>
+                <li><strong>Déployer → Nouveau déploiement</strong> → Web App → Accès : Tout le monde</li>
+                <li>Copier l'URL et la coller dans <code class="font-mono bg-amber-100 px-1 rounded">CODE_CONDUITE_SCRIPT_URL</code></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtres et tri -->
+        <div class="card mb-4">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <!-- Recherche -->
+            <div class="relative flex-1">
+              <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"></i>
+              <input type="text" x-model="search" placeholder="Rechercher un fournisseur…"
+                class="w-full pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent" />
+            </div>
+            <!-- Filtre statut -->
+            <select x-model="filterStatus"
+              class="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent bg-white">
+              <option value="">Tous les fournisseurs</option>
+              <option value="signed">✅ Signés</option>
+              <option value="unsigned">⬜ Non signés</option>
+            </select>
+            <!-- Tri -->
+            <select x-model="sortKey"
+              class="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent bg-white">
+              <option value="name_asc">Tri : A → Z</option>
+              <option value="name_desc">Tri : Z → A</option>
+              <option value="signed_first">Signés en premier</option>
+              <option value="unsigned_first">Non signés en premier</option>
+              <option value="sheet_order">Ordre du tableau</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- État de chargement initial -->
+        <div x-show="loading && entries.length === 0" class="card flex items-center justify-center py-12 gap-3" style="display:none">
+          <div class="w-5 h-5 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
+          <span class="text-sm text-gray-500">Chargement depuis Google Sheets…</span>
+        </div>
+
+        <!-- Tableau -->
+        <div class="card overflow-x-auto p-0" x-show="entries.length > 0 || (!loading && isConfigured())" style="display:none">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-100 bg-gray-50/80">
+                <th class="text-left px-4 py-3 font-semibold text-gray-600 w-1/4">Fournisseur</th>
+                <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Contact</th>
+                <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Email</th>
+                <th class="text-center px-3 py-3 font-semibold text-gray-600 w-36">Code de Conduite</th>
+                <th class="text-left px-3 py-3 font-semibold text-gray-600">Commentaire</th>
+              </tr>
+            </thead>
+            <tbody>
+              <template x-for="entry in filteredEntries()" :key="entry.row">
+                <tr class="border-b border-gray-50 last:border-0 hover:bg-gray-50/40 transition-colors">
+
+                  <!-- Fournisseur -->
+                  <td class="px-4 py-3">
+                    <div class="font-medium text-gray-800 truncate max-w-[200px]" x-text="entry.fournisseur"></div>
+                  </td>
+
+                  <!-- Contact -->
+                  <td class="px-3 py-3 hide-mobile">
+                    <div class="text-sm text-gray-600 truncate max-w-[140px]" x-text="entry.contact || '—'"></div>
+                  </td>
+
+                  <!-- Email -->
+                  <td class="px-3 py-3 hide-mobile">
+                    <a x-show="entry.email" :href="'mailto:' + entry.email"
+                      class="text-accent hover:underline text-xs truncate block max-w-[180px]"
+                      x-text="entry.email" style="display:none"></a>
+                    <span x-show="!entry.email" class="text-gray-400 text-xs">—</span>
+                  </td>
+
+                  <!-- Code de Conduite — checkbox stylisée -->
+                  <td class="px-3 py-3 text-center">
+                    <button @click="toggleSignature(entry)"
+                      class="w-6 h-6 rounded border-2 flex items-center justify-center mx-auto transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-accent/40"
+                      :class="entry.code_conduite === 'ok'
+                        ? 'bg-accent border-accent hover:bg-accent/80'
+                        : 'border-gray-300 hover:border-accent bg-white'"
+                      :title="entry.code_conduite === 'ok' ? 'Signé — cliquer pour retirer' : 'Non signé — cliquer pour valider'">
+                      <span x-show="entry.code_conduite === 'ok'"
+                        class="text-white font-bold leading-none" style="font-size:13px; display:none">✓</span>
+                    </button>
+                  </td>
+
+                  <!-- Commentaire éditable inline -->
+                  <td class="px-3 py-3" @click.stop>
+                    <div class="relative">
+                      <div
+                        x-show="editingCommentaire !== entry.row"
+                        @click="editingCommentaire = entry.row; $nextTick(() => $el.parentElement.querySelector('input').focus())"
+                        class="text-sm cursor-pointer hover:bg-gray-100 rounded px-1 py-0.5 min-h-[1.75rem] min-w-[80px] truncate max-w-[220px] flex items-center"
+                        :title="entry.commentaire ? entry.commentaire : 'Cliquer pour ajouter un commentaire'"
+                        :class="entry.commentaire ? 'text-gray-600' : 'text-gray-300 italic'"
+                        x-text="entry.commentaire || 'Ajouter…'"
+                      ></div>
+                      <input
+                        type="text"
+                        x-show="editingCommentaire === entry.row"
+                        style="display:none"
+                        :value="entry.commentaire"
+                        @blur="saveCommentaire(entry, $event.target.value)"
+                        @keydown.enter.prevent="saveCommentaire(entry, $event.target.value)"
+                        @keydown.escape="editingCommentaire = null"
+                        class="w-full px-2 py-1 border border-accent rounded text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 min-w-[120px]"
+                      />
+                    </div>
+                  </td>
+
+                </tr>
+              </template>
+
+              <!-- Aucun résultat -->
+              <tr x-show="filteredEntries().length === 0 && !loading">
+                <td colspan="5" class="px-4 py-8 text-center text-gray-400 text-sm">
+                  Aucun fournisseur ne correspond aux critères.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div><!-- /code-conduite -->
 
       <!-- ==================== VUE FICHE FOURNISSEUR ==================== -->
       <div x-show="view==='fournisseur'" class="fade-in" x-show="selectedSupplier">
