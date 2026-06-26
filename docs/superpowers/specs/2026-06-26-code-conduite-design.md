@@ -52,7 +52,7 @@ Script à déployer dans le Google Sheet (Extensions → Apps Script) en tant qu
 
 ```javascript
 const SHEET_ID = '1snLQRLAaoJGs7tPbm4Hlae9Qq3uENRy2k6pVNQSdKcg';
-const SHEET_NAME = 'Feuille 1'; // à ajuster selon le nom de l'onglet
+const SHEET_NAME = 'Fournisseurs';
 
 function doGet() {
   const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
@@ -75,7 +75,9 @@ function doGet() {
 function doPost(e) {
   const params = JSON.parse(e.postData.contents);
   const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
-  sheet.getRange(params.row, 4).setValue(params.value); // colonne D
+  // field: 'code_conduite' → col 4 (D), 'commentaire' → col 6 (F)
+  const col = params.field === 'commentaire' ? 6 : 4;
+  sheet.getRange(params.row, col).setValue(params.value);
   return ContentService
     .createTextOutput(JSON.stringify({ ok: true }))
     .setMimeType(ContentService.MimeType.JSON);
@@ -122,21 +124,28 @@ Bouton ajouté dans la navbar entre "Comparaison" et le sélecteur de thème :
 | Contact | Sheet col. B | Peut être vide |
 | Email | Sheet col. C | Lien `mailto:` si présent |
 | Code de Conduite | Sheet col. D | Checkbox : coché si `ok`, vide sinon |
-| Commentaire | Sheet col. F | Texte court, tronqué |
+| Commentaire | Sheet col. F | Champ éditable inline (clic → input text → blur sauvegarde) |
 
 La colonne "Score RSE" n'est **pas** affichée dans cette vue (hors périmètre).
 
 ### Comportement des checkboxes
 
-- **Coche → `ok`** / **Décoche → `""`** dans le Sheet
+- **Coche → `ok`** / **Décoche → `""`** dans le Sheet (col. D)
+- **Édition commentaire** : clic sur la cellule → `<input>` inline → `blur` ou `Enter` → POST col. F
 - Mise à jour localStorage immédiate (affichage optimiste)
-- Requête POST asynchrone vers l'Apps Script
+- Requête POST asynchrone vers l'Apps Script avec `{row, field, value}` (`field` = `"code_conduite"` col 4 ou `"commentaire"` col 6)
 - En cas d'erreur réseau : rollback visuel + message d'erreur discret
 
-### Filtres
+### Filtres et tris
 
-- Dropdown : "Tous" / "Signés" / "Non signés"
+**Filtres :**
+- Statut : "Tous" / "Signés" / "Non signés"
 - Champ de recherche textuelle sur le nom du fournisseur
+
+**Tris (dropdown ou colonnes cliquables) :**
+- Alphabétique A→Z / Z→A (défaut : A→Z)
+- Signés en premier / Non signés en premier
+- Ordre du Sheet (ordre d'origine)
 
 ### Indicateur de synchronisation
 
@@ -159,11 +168,13 @@ function codeConduiteView() {
     lastSync: null,
     search: '',
     filterStatus: '',     // '' | 'signed' | 'unsigned'
+    sortKey: 'name_asc',  // 'name_asc' | 'name_desc' | 'signed_first' | 'unsigned_first' | 'sheet_order'
     pendingRequests: 0,
 
-    async init() { ... },        // fetch Apps Script + merge localStorage
-    filteredEntries() { ... },   // filtre + tri
-    async toggleSignature(entry) { ... },  // optimistic update + POST
+    async init() { ... },              // fetch Apps Script + merge localStorage
+    filteredEntries() { ... },         // filtre + tri
+    async toggleSignature(entry) { ... },       // optimistic update + POST col D
+    async saveCommentaire(entry, val) { ... },  // optimistic update + POST col F
     signedCount() { ... },
   };
 }
