@@ -587,6 +587,16 @@ function comparaisonView() {
 }
 
 // =====================================================================
+// Normalisation des noms pour le matching classement ↔ Code de Conduite
+// =====================================================================
+function _normName(s) {
+  return (s || '').toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+// =====================================================================
 // JSONP helper — contourne le blocage CORS de Google Apps Script
 // =====================================================================
 function _ccJsonp(url) {
@@ -628,6 +638,7 @@ function codeConduiteView() {
     editingContact:     null,
     editingEmail:       null,
     classementSuppliers: [],
+    _classementNorms:   [],
     showModal:          false,
     modalMode:          'add',
     modalForm:          { row: null, fournisseur: '', fournisseurCustom: '', contact: '', email: '' },
@@ -645,6 +656,7 @@ function codeConduiteView() {
         this.classementSuppliers = (d.suppliers || [])
           .map(s => s.name)
           .sort((a, b) => a.localeCompare(b, 'fr'));
+        this._classementNorms = this.classementSuppliers.map(_normName);
       } catch (_) {}
 
       if (!CODE_CONDUITE_SCRIPT_URL) return;
@@ -781,6 +793,17 @@ function codeConduiteView() {
 
     isConfigured() {
       return !!CODE_CONDUITE_SCRIPT_URL;
+    },
+
+    isInClassement(entry) {
+      const norm = _normName(entry.fournisseur);
+      if (!norm) return false;
+      return this._classementNorms.some(cn => {
+        if (cn === norm) return true;
+        if (norm.length >= 5 && cn.includes(norm)) return true;
+        if (cn.length >= 5 && norm.includes(cn)) return true;
+        return false;
+      });
     },
 
     openAddModal() {

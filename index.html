@@ -766,6 +766,7 @@
                 <th class="text-left px-4 py-3 font-semibold text-gray-600 w-1/4">Fournisseur</th>
                 <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Contact</th>
                 <th class="text-left px-3 py-3 font-semibold text-gray-600 hide-mobile">Email</th>
+                <th class="text-center px-3 py-3 font-semibold text-gray-600 w-28 hide-mobile" title="A répondu au questionnaire RSE Fournisseurs">Questionnaire RSE</th>
                 <th class="text-center px-3 py-3 font-semibold text-gray-600 w-36">Code de Conduite</th>
                 <th class="text-left px-3 py-3 font-semibold text-gray-600">Commentaire</th>
               </tr>
@@ -820,6 +821,16 @@
                     </div>
                   </td>
 
+                  <!-- Questionnaire RSE — présence dans le classement -->
+                  <td class="px-3 py-3 text-center hide-mobile">
+                    <span x-show="isInClassement(entry)" style="display:none"
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">
+                      <i data-lucide="check" class="w-3 h-3"></i> Oui
+                    </span>
+                    <span x-show="!isInClassement(entry)"
+                      class="text-gray-300 text-xs">—</span>
+                  </td>
+
                   <!-- Code de Conduite — checkbox stylisée -->
                   <td class="px-3 py-3 text-center">
                     <button @click="toggleSignature(entry)"
@@ -862,7 +873,7 @@
 
               <!-- Aucun résultat -->
               <tr x-show="filteredEntries().length === 0 && !loading">
-                <td colspan="5" class="px-4 py-8 text-center text-gray-400 text-sm">
+                <td colspan="6" class="px-4 py-8 text-center text-gray-400 text-sm">
                   Aucun fournisseur ne correspond aux critères.
                 </td>
               </tr>
