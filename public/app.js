@@ -17,7 +17,7 @@ const PILLAR_COLORS = [
 
 // URL du Google Apps Script déployé pour le Code de Conduite
 // Laisser vide '' si non configuré — la vue affichera les instructions de setup
-const CODE_CONDUITE_SCRIPT_URL = '';
+const CODE_CONDUITE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbysN66yaGPgbuWS5i4pLRBvPxDQ6v-P1LXaByd23mpzszTjI8HTD8iAjPpZwHCiZvrW/exec';
 
 // =====================================================================
 // CHART HELPERS
