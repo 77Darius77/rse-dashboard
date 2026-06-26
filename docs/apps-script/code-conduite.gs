@@ -5,6 +5,19 @@
 const SHEET_ID   = '1snLQRLAaoJGs7tPbm4Hlae9Qq3uENRy2k6pVNQSdKcg';
 const SHEET_NAME = 'Fournisseurs';
 
+// Retourne la réponse en JSON ou JSONP selon la présence du paramètre callback
+function respond_(params, payload) {
+  const json = JSON.stringify(payload);
+  if (params.callback) {
+    return ContentService
+      .createTextOutput(params.callback + '(' + json + ')')
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+  return ContentService
+    .createTextOutput(json)
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 function doGet(e) {
   const params = (e && e.parameter) ? e.parameter : {};
 
@@ -15,15 +28,11 @@ function doGet(e) {
     const value = params.value !== undefined ? params.value : '';
 
     if (!row || row < 2) {
-      return ContentService
-        .createTextOutput(JSON.stringify({ error: 'Numéro de ligne invalide' }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return respond_(params, { error: 'Numéro de ligne invalide' });
     }
 
     if (!['code_conduite', 'commentaire'].includes(field)) {
-      return ContentService
-        .createTextOutput(JSON.stringify({ error: 'Champ invalide' }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return respond_(params, { error: 'Champ invalide' });
     }
     // code_conduite = colonne D (4), commentaire = colonne F (6)
     const col = field === 'commentaire' ? 6 : 4;
@@ -33,14 +42,10 @@ function doGet(e) {
       if (!sheet) throw new Error('Onglet introuvable : ' + SHEET_NAME);
       sheet.getRange(row, col).setValue(value);
     } catch (err) {
-      return ContentService
-        .createTextOutput(JSON.stringify({ error: err.message }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return respond_(params, { error: err.message });
     }
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ ok: true }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return respond_(params, { ok: true });
   }
 
   // Lecture par défaut : retourne toutes les lignes non vides
@@ -59,12 +64,8 @@ function doGet(e) {
         questionnaire: row[4] || '',
         commentaire:   row[5] || ''
       }));
-    return ContentService
-      .createTextOutput(JSON.stringify({ data }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return respond_(params, { data });
   } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ error: err.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return respond_(params, { error: err.message });
   }
 }

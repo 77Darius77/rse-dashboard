@@ -676,6 +676,29 @@ function comparaisonView() {
 }
 
 // =====================================================================
+// JSONP helper — contourne le blocage CORS de Google Apps Script
+// =====================================================================
+function _ccJsonp(url) {
+  return new Promise((resolve, reject) => {
+    const cb = '__ccCb' + Date.now() + Math.random().toString(36).slice(2);
+    const script = document.createElement('script');
+    window[cb] = function(data) {
+      delete window[cb];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      resolve(data);
+    };
+    script.onerror = function() {
+      delete window[cb];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      reject(new Error('Erreur réseau'));
+    };
+    const sep = url.includes('?') ? '&' : '?';
+    script.src = url + sep + 'callback=' + cb;
+    document.head.appendChild(script);
+  });
+}
+
+// =====================================================================
 // CODE DE CONDUITE VIEW COMPONENT
 // =====================================================================
 function codeConduiteView() {
@@ -703,9 +726,8 @@ function codeConduiteView() {
 
       this.loading = true;
       try {
-        const res = await fetch(CODE_CONDUITE_SCRIPT_URL);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const json = await res.json();
+        const json = await _ccJsonp(CODE_CONDUITE_SCRIPT_URL);
+        if (json.error) throw new Error(json.error);
         this.entries = json.data || [];
         localStorage.setItem(CACHE_KEY, JSON.stringify(this.entries));
         this.lastSync = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
@@ -773,8 +795,8 @@ function codeConduiteView() {
         const url = CODE_CONDUITE_SCRIPT_URL
           + '?action=update&row=' + entry.row
           + '&field=code_conduite&value=' + encodeURIComponent(newVal);
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await _ccJsonp(url);
+        if (json.error) throw new Error(json.error);
         this.lastSync  = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
         this.syncError = null;
       } catch (e) {
@@ -803,8 +825,8 @@ function codeConduiteView() {
         const url = CODE_CONDUITE_SCRIPT_URL
           + '?action=update&row=' + entry.row
           + '&field=commentaire&value=' + encodeURIComponent(val);
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await _ccJsonp(url);
+        if (json.error) throw new Error(json.error);
         this.lastSync  = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
         this.syncError = null;
       } catch (e) {
