@@ -110,6 +110,9 @@
             <button @click="view='comparaison'" :class="view==='comparaison' ? 'active' : ''" class="nav-link">
               Comparaison
             </button>
+            <button @click="view='code-conduite'; $nextTick(() => lucide.createIcons())" :class="view==='code-conduite' ? 'active' : ''" class="nav-link">
+              Code de Conduite
+            </button>
           </div>
 
           <!-- Last updated + theme toggle -->
