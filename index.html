@@ -454,10 +454,6 @@
           </table>
         </div>
 
-        <!-- Event listener for opening supplier from table row -->
-        <span
-          x-init="$el.closest('[x-data]').$el.addEventListener('open-supplier', e => { const appEl = document.querySelector('[x-data]'); if(appEl && appEl._x_dataStack) { const appData = Alpine.$data(appEl); if(appData) appData.openSupplier(e.detail.supplier || e.detail, e.detail.list); } })"></span>
-
       </div><!-- /classement -->
 
 
