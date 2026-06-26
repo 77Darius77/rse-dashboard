@@ -192,7 +192,6 @@ function app() {
         } else if (this.view === 'analyse') {
           this.drawDonutLevels();
           this.drawDonutLangs();
-          this.drawBubblePillars();
         } else if (this.view === 'fournisseur' && this.selectedSupplier) {
           this.drawSupplierRadar(this.selectedSupplier);
         }
@@ -306,7 +305,6 @@ function app() {
       this.$nextTick(() => {
         this.drawDonutLevels();
         this.drawDonutLangs();
-        this.drawBubblePillars();
       });
     },
 
@@ -400,93 +398,6 @@ function app() {
       });
     },
 
-    drawBubblePillars() {
-      destroyChart('bubblePillars');
-      const canvas = document.getElementById('bubblePillars');
-      if (!canvas) return;
-
-      const WEIGHTS = {
-        gouvernance: 10,
-        droits_humains: 20,
-        sst: 20,
-        ethique: 10,
-        environnement: 25,
-        achats: 15
-      };
-
-      const stats = this.analyseStats();
-      if (!stats) return;
-      const suppliers = this.analyseSuppliers();
-      const pillars = Object.keys(stats.by_pillar);
-
-      const datasets = pillars.map(pillar => {
-        const score = stats.by_pillar[pillar];
-        const weight = WEIGHTS[pillar] || 10;
-        const redCount = suppliers.filter(s => s.scores && s.scores[pillar] < 50).length;
-        const color = score >= 70 ? '#22c55e' : score >= 50 ? '#f59e0b' : '#E63946';
-        return {
-          label: PILLAR_LABELS[pillar] || pillar,
-          data: [{ x: score, y: weight, r: Math.max(12, redCount * 4) }],
-          backgroundColor: color + 'bb',
-          borderColor: color,
-          borderWidth: 2,
-          redCount
-        };
-      });
-
-      new Chart(canvas, {
-        type: 'bubble',
-        data: { datasets },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          layout: {
-            padding: { top: 20 }
-          },
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                label: ctx => {
-                  const ds = datasets[ctx.datasetIndex];
-                  return [
-                    ds.label,
-                    'Score moyen : ' + ctx.raw.x.toFixed(1) + '%',
-                    'Importance : ' + ctx.raw.y + '%',
-                    'Fournisseurs en rouge : ' + ds.redCount
-                  ];
-                }
-              }
-            },
-            datalabels: {
-              display: true,
-              color: themeColors().datalabels,
-              font: { size: 11, weight: '600' },
-              formatter: (val, ctx) => datasets[ctx.datasetIndex].label,
-              anchor: 'end',
-              align: 'top',
-              offset: 4
-            }
-          },
-          scales: {
-            x: {
-              min: 0,
-              max: 100,
-              title: { display: true, text: 'Score moyen (%)', font: { size: 11 }, color: themeColors().axisTitle },
-              ticks: { callback: v => v + '%', font: { size: 11 }, color: themeColors().ticks },
-              grid: { color: themeColors().gridLight }
-            },
-            y: {
-              min: 0,
-              max: 30,
-              title: { display: true, text: 'Importance (%)', font: { size: 11 }, color: themeColors().axisTitle },
-              ticks: { callback: v => v + '%', font: { size: 11 }, stepSize: 5, color: themeColors().ticks },
-              grid: { color: themeColors().gridLight }
-            }
-          }
-        }
-      });
-    }
   };
 }
 
